@@ -1,5 +1,5 @@
 const words = [
-  "SOCIAL MEDIA", "•", "CONTENT", "•", "BRANDING", "•", "VIDEOGRAPHY", "•",
+  "SOCIAL MEDIA", "•", "CONTENT", "•", "EMAIL MARKETING", "•", "VIDEOGRAPHY", "•",
   "PPC", "•", "SEO", "•", "DIGITAL", "•", "SOCIAL", "•",
 ];
 
