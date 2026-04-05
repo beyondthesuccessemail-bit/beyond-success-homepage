@@ -35,14 +35,18 @@ const HeroSection = () => {
 
       {/* Content */}
       <div className="relative z-10 text-center max-w-5xl mx-auto px-6">
-        <motion.img
-          src={logo}
-          alt="Beyond The Success"
-          className="w-32 h-32 md:w-40 md:h-40 mx-auto mb-8 object-contain"
+        <motion.div
+          className="flex justify-center mb-10"
           initial={{ scale: 0, rotate: -180 }}
           animate={{ scale: 1, rotate: 0 }}
           transition={{ type: "spring", stiffness: 100, damping: 15, duration: 1 }}
-        />
+        >
+          <img
+            src={logo}
+            alt="Beyond The Success"
+            className="w-48 h-48 md:w-56 md:h-56 object-contain"
+          />
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -71,7 +75,7 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
         >
-          We don't just market brands — we build legacies. Born from the stories of
+          We don't just market brands, we build legacies. Born from the stories of
           entrepreneurs on <span className="text-gold font-semibold">Beyond The Success</span>,
           we help companies reach their true potential.
         </motion.p>
@@ -86,7 +90,7 @@ const HeroSection = () => {
             Start Your Journey
           </button>
           <button className="px-8 py-4 rounded-lg border-glow text-foreground font-display font-semibold text-lg hover:bg-foreground/5 transition-colors duration-300">
-            Watch Our Story
+            Learn More
           </button>
         </motion.div>
       </div>

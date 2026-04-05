@@ -35,7 +35,7 @@ const BeyondSection = () => {
             <p className="text-muted-foreground text-lg font-body leading-relaxed mb-6">
               Our marketing agency was born from the real stories shared by entrepreneurs on our
               interview platform. We listened to hundreds of founders share their struggles,
-              breakthroughs, and strategies — then built an agency that truly understands what
+              breakthroughs, and strategies, then built an agency that truly understands what
               growing businesses need.
             </p>
             <button className="flex items-center gap-2 text-gold font-display font-semibold hover:gap-4 transition-all duration-300">
