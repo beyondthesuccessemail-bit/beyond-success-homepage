@@ -25,7 +25,7 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <span className="font-display text-lg font-bold text-foreground tracking-wide">
-          BEYOND THE SUCCESS
+          BECOMING THE SUCCESS
         </span>
 
         <div className="hidden md:flex items-center gap-8">
