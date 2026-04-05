@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import heroBg from "@/assets/hero-bg.jpg";
-import logo from "@/assets/logo.png";
 
 const HeroSection = () => {
   return (
@@ -35,19 +34,6 @@ const HeroSection = () => {
 
       {/* Content */}
       <div className="relative z-10 text-center max-w-5xl mx-auto px-6">
-        <motion.div
-          className="flex justify-center mb-10"
-          initial={{ scale: 0, rotate: -180 }}
-          animate={{ scale: 1, rotate: 0 }}
-          transition={{ type: "spring", stiffness: 100, damping: 15, duration: 1 }}
-        >
-          <img
-            src={logo}
-            alt="Beyond The Success"
-            className="w-48 h-48 md:w-56 md:h-56 object-contain"
-          />
-        </motion.div>
-
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
