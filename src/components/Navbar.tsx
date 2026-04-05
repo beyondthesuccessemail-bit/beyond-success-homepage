@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/logo.png";
 
 const links = ["About", "Services", "Stories", "Contact"];
 
@@ -25,7 +24,9 @@ const Navbar = () => {
       transition={{ duration: 0.6 }}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <img src={logo} alt="Beyond The Success" className="h-10 w-auto object-contain" />
+        <span className="font-display text-lg font-bold text-foreground tracking-wide">
+          BEYOND THE SUCCESS
+        </span>
 
         <div className="hidden md:flex items-center gap-8">
           {links.map((link) => (

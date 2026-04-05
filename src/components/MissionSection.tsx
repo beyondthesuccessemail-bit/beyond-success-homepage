@@ -2,12 +2,12 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Heart, Users, TrendingUp, Sparkles } from "lucide-react";
-import teamImg from "@/assets/team-success.jpg";
+import caringImg from "@/assets/caring-person.jpg";
 
 const values = [
   { icon: Heart, title: "People First", desc: "Every strategy starts with understanding the humans behind the brand." },
-  { icon: Users, title: "Genuine Care", desc: "We invest in your success as if it were our own — because it is." },
-  { icon: TrendingUp, title: "Proven Growth", desc: "Strategies shaped by real stories from founders who've been there." },
+  { icon: Users, title: "Genuine Care", desc: "We invest in your success as if it were our own, because it is." },
+  { icon: TrendingUp, title: "Proven Growth", desc: "Strategies shaped by real stories from founders who have been there." },
   { icon: Sparkles, title: "Beyond Average", desc: "We don't settle for good enough. We push for extraordinary." },
 ];
 
@@ -33,7 +33,7 @@ const MissionSection = () => {
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6 font-body">
               Born from the interviews and stories shared on <span className="text-gold font-semibold">Beyond The Success</span>,
-              we saw a gap — brilliant entrepreneurs with incredible visions, but no one to truly champion
+              we saw a gap: brilliant entrepreneurs with incredible visions, but no one to truly champion
               their marketing. We're not just another agency. We're your partner in growth.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed font-body">
@@ -49,7 +49,7 @@ const MissionSection = () => {
             transition={{ duration: 0.9, delay: 0.2 }}
           >
             <div className="relative rounded-2xl overflow-hidden glow-gold">
-              <img src={teamImg} alt="Our team celebrating success" className="w-full h-auto" loading="lazy" width={1280} height={720} />
+              <img src={caringImg} alt="Entrepreneur smiling at their workspace" className="w-full h-auto" loading="lazy" width={1280} height={720} />
               <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/60 to-transparent" />
             </div>
             <motion.div

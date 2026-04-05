@@ -1,17 +1,18 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { ChevronLeft, ChevronRight, Megaphone, Video, PenTool, BarChart3, Globe, Zap } from "lucide-react";
+import { ChevronLeft, ChevronRight, Video, Share2, Target, Search, Globe, CreditCard, Mail } from "lucide-react";
 import strategyImg from "@/assets/strategy.jpg";
 import marketingImg from "@/assets/marketing.jpg";
 import interviewImg from "@/assets/interview.jpg";
 
 const services = [
-  { icon: Megaphone, title: "Brand Strategy", desc: "We craft narratives that resonate with real people and drive authentic engagement.", image: strategyImg },
-  { icon: Video, title: "Content Production", desc: "From podcasts to campaigns — cinematic content that tells your story.", image: interviewImg },
-  { icon: PenTool, title: "Creative Direction", desc: "Visual identities that stand out in a sea of sameness.", image: marketingImg },
-  { icon: BarChart3, title: "Growth Marketing", desc: "Data-driven campaigns that deliver measurable, sustainable growth.", image: strategyImg },
-  { icon: Globe, title: "Digital Presence", desc: "Websites and social strategies that convert followers into customers.", image: marketingImg },
-  { icon: Zap, title: "Launch Campaigns", desc: "High-impact launches that create buzz and drive immediate results.", image: interviewImg },
+  { icon: Video, title: "Videography", desc: "Cinematic video content that captures your brand's story and connects with your audience on a deeper level.", image: interviewImg },
+  { icon: Share2, title: "Social Media", desc: "Organic strategies that build real communities and turn followers into loyal customers.", image: marketingImg },
+  { icon: Target, title: "PPC", desc: "Pay-per-click campaigns that maximise your return on investment and drive qualified leads.", image: strategyImg },
+  { icon: Search, title: "SEO", desc: "Search engine optimisation that puts your brand in front of the right people at the right time.", image: marketingImg },
+  { icon: Globe, title: "Website Design", desc: "Beautiful, high-converting websites that reflect your brand and deliver results.", image: strategyImg },
+  { icon: CreditCard, title: "Paid Social", desc: "Targeted social advertising that reaches your ideal audience and drives measurable growth.", image: interviewImg },
+  { icon: Mail, title: "Email Marketing", desc: "Personalised email campaigns that nurture leads and keep your customers coming back.", image: marketingImg },
 ];
 
 const ServicesCarousel = () => {
@@ -107,7 +108,7 @@ const ServicesCarousel = () => {
         </div>
 
         {/* Service cards strip */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mt-10">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 mt-10">
           {services.map((svc, i) => (
             <motion.button
               key={svc.title}
