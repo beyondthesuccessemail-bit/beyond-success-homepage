@@ -1,6 +1,6 @@
 const words = [
-  "STRATEGY", "•", "CONTENT", "•", "BRANDING", "•", "GROWTH", "•",
-  "PODCASTS", "•", "CAMPAIGNS", "•", "DIGITAL", "•", "SOCIAL", "•",
+  "SOCIAL MEDIA", "•", "CONTENT", "•", "BRANDING", "•", "VIDEOGRAPHY", "•",
+  "PPC", "•", "SEO", "•", "DIGITAL", "•", "SOCIAL", "•",
 ];
 
 const MarqueeSection = () => {
