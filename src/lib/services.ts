@@ -116,7 +116,7 @@ export const services: ServiceData[] = [
     slug: "website-design",
     desc: "Beautiful, high-converting websites that reflect your brand and deliver results.",
     heroTagline: "Design That Converts",
-    heroDescription: "We design and build stunning websites that don't just look good — they drive results. Every pixel is intentional, every interaction is optimised for conversion.",
+    heroDescription: "We design and build stunning websites that don't just look good, they drive results. Every pixel is intentional, every interaction is optimised for conversion.",
     features: [
       "Custom Website Design & Development",
       "E-commerce Solutions",
