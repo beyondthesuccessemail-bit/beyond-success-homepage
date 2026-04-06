@@ -1,5 +1,5 @@
 import logo from "@/assets/logo.png";
-import { Instagram, Twitter, Linkedin, Youtube } from "lucide-react";
+import { Instagram, Youtube } from "lucide-react";
 
 const Footer = () => (
   <footer className="bg-navy-deep border-t border-border px-6 py-12">
