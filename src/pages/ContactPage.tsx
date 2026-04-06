@@ -37,15 +37,9 @@ const ContactPage = () => {
       href: "mailto:hello@becomingthesuccess.com",
     },
     {
-      icon: Phone,
-      label: "Call Us",
-      value: "Get in touch for a free consultation",
-      href: "mailto:hello@becomingthesuccess.com",
-    },
-    {
       icon: MapPin,
       label: "Based In",
-      value: "United Kingdom",
+      value: "Marbella, Spain",
     },
   ];
 
