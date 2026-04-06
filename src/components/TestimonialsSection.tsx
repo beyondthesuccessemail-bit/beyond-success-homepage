@@ -12,7 +12,7 @@ const testimonials = [
   {
     name: "Marcus Johnson",
     role: "Founder, GreenLeaf Co.",
-    quote: "After being interviewed on Beyond The Success podcast, they helped us turn our story into a full brand campaign. Revenue up 340% in 8 months.",
+    quote: "After being interviewed on the Beyond The Success podcast, Becoming The Success helped us turn our story into a full brand campaign. Revenue up 340% in 8 months.",
     stars: 5,
   },
   {
