@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import heroVideo from "@/assets/hero-video.mp4.asset.json";
+import heroVideo from "@/assets/hero-video-v2.mp4.asset.json";
 
 const HeroSection = () => {
   return (
