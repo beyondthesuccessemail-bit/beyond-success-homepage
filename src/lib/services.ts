@@ -19,6 +19,7 @@ import websiteDesignHero from "@/assets/service-website-design-hero.jpg";
 import seoHero from "@/assets/service-seo-hero.jpg";
 import ppcHero from "@/assets/service-ppc-hero.jpg";
 import paidSocialHero from "@/assets/service-paid-social-hero.jpg";
+import emailMarketingHero from "@/assets/service-email-marketing-hero.jpg";
 
 export const services: ServiceData[] = [
   {
@@ -183,21 +184,24 @@ export const services: ServiceData[] = [
     slug: "email-marketing",
     desc: "Personalised email campaigns that nurture leads and keep your customers coming back.",
     heroTagline: "Inbox to Income",
-    heroDescription: "We build email marketing systems that nurture leads, drive repeat purchases, and turn one-time buyers into lifetime customers. Every email is crafted to convert.",
+    heroDescription: "We build email marketing systems that nurture leads, drive repeat purchases, and turn one-time buyers into lifetime customers. From welcome sequences and abandoned cart flows to monthly newsletters and product launches, every email we send is strategically crafted to engage your audience and generate revenue. No spam, no fluff, just emails people actually want to open.",
+    heroImage: emailMarketingHero,
     features: [
-      "Email Strategy & Automation",
+      "Email Strategy & Automation Flows",
       "Campaign Design & Copywriting",
       "List Segmentation & Personalisation",
-      "A/B Testing & Optimisation",
+      "A/B Testing & Subject Line Optimisation",
       "Drip Sequences & Nurture Flows",
-      "Deliverability & List Hygiene",
+      "Deliverability Monitoring & List Hygiene",
+      "Welcome, Abandoned Cart & Win-Back Sequences",
+      "Monthly Performance Reporting & Insights",
     ],
     process: [
-      { step: "Audit", description: "Review existing email infrastructure, lists, and performance." },
-      { step: "Strategy", description: "Map out automation flows, segments, and campaign calendar." },
-      { step: "Build", description: "Design templates, write copy, and set up automation sequences." },
-      { step: "Test", description: "A/B test subject lines, content, and send times." },
-      { step: "Refine", description: "Ongoing optimisation based on open rates, clicks, and revenue." },
+      { step: "Audit", description: "We review your existing email infrastructure, subscriber lists, and past campaign performance to identify gaps and opportunities." },
+      { step: "Strategy", description: "We map out automation flows, audience segments, and a campaign calendar aligned to your business goals and customer journey." },
+      { step: "Build", description: "Our team designs on-brand templates, writes compelling copy, and sets up automation sequences in your chosen email platform." },
+      { step: "Test", description: "We A/B test subject lines, content layouts, calls to action, and send times to find the combinations that drive the best results." },
+      { step: "Refine", description: "Ongoing optimisation based on open rates, click-through rates, conversions, and revenue, with clear monthly reporting." },
     ],
   },
 ];
