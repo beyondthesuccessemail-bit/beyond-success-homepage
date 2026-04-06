@@ -16,6 +16,7 @@ export interface ServiceData {
 import socialMediaHero from "@/assets/service-social-media-hero.jpg";
 import videographyHero from "@/assets/service-videography-hero.jpg";
 import websiteDesignHero from "@/assets/service-website-design-hero.jpg";
+import seoHero from "@/assets/service-seo-hero.jpg";
 
 export const services: ServiceData[] = [
   {
@@ -97,23 +98,26 @@ export const services: ServiceData[] = [
     icon: Search,
     title: "SEO",
     slug: "seo",
-    desc: "Search engine optimisation that puts your brand in front of the right people at the right time.",
+    desc: "Strategic search engine optimisation that drives consistent, qualified organic traffic to your website month after month.",
     heroTagline: "Be Found, Be Chosen",
-    heroDescription: "We build sustainable organic visibility through technical excellence, compelling content, and strategic link building. Our SEO drives long-term, compounding growth.",
+    heroDescription: "We help businesses climb the search rankings and stay there. Our approach to search engine optimisation combines technical expertise, high-quality content, and strategic link building to deliver sustainable organic growth. No shortcuts, no tricks, just proven methods that compound over time and put your brand in front of the people actively searching for what you offer.",
+    heroImage: seoHero,
     features: [
-      "Technical SEO Audits & Fixes",
-      "On-Page Optimisation",
-      "Content Strategy & Creation",
-      "Link Building & Digital PR",
-      "Local SEO & Google Business Profile",
-      "Monthly Reporting & Insights",
+      "Comprehensive Technical SEO Audits & Fixes",
+      "On-Page Optimisation & Keyword Targeting",
+      "Content Strategy, Creation & Optimisation",
+      "Link Building & Digital PR Outreach",
+      "Local SEO & Google Business Profile Management",
+      "Competitor Analysis & Market Research",
+      "Core Web Vitals & Site Speed Optimisation",
+      "Transparent Monthly Reporting & Insights",
     ],
     process: [
-      { step: "Audit", description: "Comprehensive technical and content audit of your current site." },
-      { step: "Strategy", description: "Keyword mapping, content gaps analysis, and prioritised roadmap." },
-      { step: "Implement", description: "On-page optimisations, technical fixes, and content creation." },
-      { step: "Build", description: "Authority building through strategic link acquisition and digital PR." },
-      { step: "Report", description: "Transparent monthly reporting with actionable insights." },
+      { step: "Audit", description: "We carry out a thorough technical and content audit of your website, identifying every issue holding back your rankings." },
+      { step: "Strategy", description: "Keyword research, competitor analysis, content gap mapping, and a prioritised roadmap tailored to your goals." },
+      { step: "Implement", description: "On-page optimisations, technical fixes, meta data improvements, and content creation to strengthen your site from the ground up." },
+      { step: "Build Authority", description: "Strategic link acquisition and digital PR to grow your domain authority and build trust with search engines." },
+      { step: "Report & Refine", description: "Monthly performance reports with clear insights, tracking rankings, traffic, and conversions so you can see the impact." },
     ],
   },
   {
