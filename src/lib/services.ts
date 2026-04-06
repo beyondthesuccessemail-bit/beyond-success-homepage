@@ -138,12 +138,8 @@ export const services: ServiceData[] = [
       { step: "Discovery & Strategy", description: "We learn your business inside out, your goals, audience, competitors, and growth plans, to define a website strategy that delivers." },
       { step: "Wireframing & UX Design", description: "We map out every page with user journeys, conversion paths, and intuitive navigation before any visual design begins." },
       { step: "Visual Design", description: "High-fidelity mockups that bring your brand to life with bold, modern aesthetics and pixel-perfect attention to detail." },
-      { step: "Development & Build", description: "Clean, semantic code with structured data, optimised meta tags, and fast load times, built with a foundation that supports future search engine optimisation and PPC campaigns." },
+      { step: "Development & Build", description: "Clean, semantic code with structured data, optimised meta tags, and fast load times, all built on a solid foundation for long-term growth." },
       { step: "Testing & Launch", description: "Rigorous cross-browser and device testing, performance audits, and a smooth deployment with post-launch monitoring." },
-    ],
-    relatedServices: [
-      { text: "Once your website is live, drive organic traffic with our", linkText: "search engine optimisation services", slug: "seo" },
-      { text: "Maximise your return from day one with", linkText: "targeted PPC campaigns", slug: "ppc" },
     ],
   },
   {
