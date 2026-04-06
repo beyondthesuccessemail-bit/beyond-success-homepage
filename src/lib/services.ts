@@ -19,7 +19,7 @@ export const services: ServiceData[] = [
     icon: Share2,
     title: "Social Media",
     slug: "social-media",
-    desc: "We film, storyboard, schedule, and report on your short-form social content — end to end.",
+    desc: "We film, storyboard, schedule, and report on your short-form social content, end to end.",
     heroTagline: "Build Communities, Not Just Followers",
     heroDescription: "We don't just manage your socials — we come to you, film short-form content, storyboard creative ideas, schedule everything, and deliver monthly performance reports. From concept to analytics, we handle it all so you can focus on running your business.",
     heroImage: socialMediaHero,
