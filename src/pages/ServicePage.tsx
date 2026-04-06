@@ -160,7 +160,8 @@ const ServicePage = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="p-6 rounded-xl bg-card/60 border-glow flex items-start gap-4"
+                whileHover={{ scale: 1.05, y: -4 }}
+                className="p-6 rounded-xl bg-card/60 border-glow flex items-start gap-4 cursor-default hover:bg-accent/10 hover:border-gold/30 transition-colors duration-300"
               >
                 <CheckCircle className="w-5 h-5 text-gold mt-0.5 shrink-0" />
                 <span className="font-body text-foreground">{feature}</span>
