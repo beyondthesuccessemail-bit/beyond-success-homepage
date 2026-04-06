@@ -1,5 +1,5 @@
 import logo from "@/assets/logo.png";
-import { Instagram, Twitter, Linkedin, Youtube } from "lucide-react";
+import { Instagram, Youtube } from "lucide-react";
 
 const Footer = () => (
   <footer className="bg-navy-deep border-t border-border px-6 py-12">
@@ -33,8 +33,7 @@ const Footer = () => (
         <div className="flex gap-3">
           {[
             { Icon: Instagram, href: "https://www.instagram.com/beyond.the.success" },
-            { Icon: Twitter, href: "#" },
-            { Icon: Linkedin, href: "#" },
+            { Icon: Youtube, href: "https://www.youtube.com/channel/UC7U1EqGUfl3iz7Qa0geKFQw" },
             { Icon: Youtube, href: "https://www.youtube.com/channel/UC7U1EqGUfl3iz7Qa0geKFQw" },
           ].map(({ Icon, href }, i) => (
             <a key={i} href={href} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border-glow flex items-center justify-center hover:bg-accent hover:text-accent-foreground cursor-pointer transition-colors">
