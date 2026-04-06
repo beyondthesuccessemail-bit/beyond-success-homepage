@@ -91,6 +91,15 @@ const Navbar = () => {
                 </AnimatePresence>
               </div>
             ) : (
+              link.isRoute ? (
+              <Link
+                key={link.label}
+                to={link.href}
+                className="text-foreground/80 hover:text-gold font-body text-sm tracking-wide transition-colors duration-300"
+              >
+                {link.label}
+              </Link>
+            ) : (
               <a
                 key={link.label}
                 href={link.href}
@@ -98,6 +107,7 @@ const Navbar = () => {
               >
                 {link.label}
               </a>
+            )
             )
           )}
           <button className="px-5 py-2.5 rounded-lg bg-accent text-accent-foreground font-display font-semibold text-sm hover:scale-105 transition-transform">
