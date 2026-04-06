@@ -3,12 +3,11 @@ import { useState, useEffect, useRef } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { services } from "@/lib/services";
+import logo from "@/assets/logo.png";
 
 const navLinks = [
   { label: "About", href: "/about", isRoute: true },
   { label: "Services", href: "/#services", hasDropdown: true },
-  { label: "Stories", href: "/#stories" },
-  { label: "Contact", href: "/#contact" },
 ];
 
 const Navbar = () => {
@@ -51,8 +50,8 @@ const Navbar = () => {
       transition={{ duration: 0.6 }}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <Link to="/" className="font-display text-lg font-bold text-foreground tracking-wide">
-          BECOMING THE SUCCESS
+        <Link to="/" className="flex items-center">
+          <img src={logo} alt="Beyond The Success" className="h-8 w-auto object-contain" />
         </Link>
 
         <div className="hidden md:flex items-center gap-8">
@@ -90,8 +89,7 @@ const Navbar = () => {
                   )}
                 </AnimatePresence>
               </div>
-            ) : (
-              link.isRoute ? (
+            ) : link.isRoute ? (
               <Link
                 key={link.label}
                 to={link.href}
@@ -108,11 +106,13 @@ const Navbar = () => {
                 {link.label}
               </a>
             )
-            )
           )}
-          <button className="px-5 py-2.5 rounded-lg bg-accent text-accent-foreground font-display font-semibold text-sm hover:scale-105 transition-transform">
+          <Link
+            to="/contact"
+            className="px-5 py-2.5 rounded-lg bg-accent text-accent-foreground font-display font-semibold text-sm hover:scale-105 transition-transform"
+          >
             Work With Us
-          </button>
+          </Link>
         </div>
 
         <button className="md:hidden text-foreground" onClick={() => setOpen(!open)}>
@@ -159,8 +159,7 @@ const Navbar = () => {
                   )}
                 </AnimatePresence>
               </div>
-            ) : (
-            link.isRoute ? (
+            ) : link.isRoute ? (
               <Link
                 key={link.label}
                 to={link.href}
@@ -179,11 +178,14 @@ const Navbar = () => {
                 {link.label}
               </a>
             )
-            )
           )}
-          <button className="mt-3 w-full px-5 py-3 rounded-lg bg-accent text-accent-foreground font-display font-semibold">
+          <Link
+            to="/contact"
+            className="mt-3 block w-full text-center px-5 py-3 rounded-lg bg-accent text-accent-foreground font-display font-semibold"
+            onClick={() => setOpen(false)}
+          >
             Work With Us
-          </button>
+          </Link>
         </motion.div>
       )}
     </motion.nav>
