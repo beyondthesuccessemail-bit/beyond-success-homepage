@@ -6,7 +6,7 @@ const testimonials = [
   {
     name: "Sarah Mitchell",
     role: "CEO, TechVentures",
-    quote: "Beyond The Success didn't just help us grow, they genuinely cared about our mission. It's rare to find a marketing partner that feels like family.",
+    quote: "Becoming The Success didn't just help us grow, they genuinely cared about our mission. It's rare to find a marketing partner that feels like family.",
     stars: 5,
   },
   {
