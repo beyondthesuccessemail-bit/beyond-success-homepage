@@ -1,17 +1,44 @@
-import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect, useRef } from "react";
+import { Menu, X, ChevronDown } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
+import { services } from "@/lib/services";
 
-const links = ["About", "Services", "Stories", "Contact"];
+const navLinks = [
+  { label: "About", href: "/#about" },
+  { label: "Services", href: "/#services", hasDropdown: true },
+  { label: "Stories", href: "/#stories" },
+  { label: "Contact", href: "/#contact" },
+];
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+  const location = useLocation();
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handler);
     return () => window.removeEventListener("scroll", handler);
+  }, []);
+
+  useEffect(() => {
+    setOpen(false);
+    setServicesOpen(false);
+    setMobileServicesOpen(false);
+  }, [location]);
+
+  useEffect(() => {
+    const handleClick = (e: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+        setServicesOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClick);
+    return () => document.removeEventListener("mousedown", handleClick);
   }, []);
 
   return (
@@ -24,16 +51,55 @@ const Navbar = () => {
       transition={{ duration: 0.6 }}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <span className="font-display text-lg font-bold text-foreground tracking-wide">
+        <Link to="/" className="font-display text-lg font-bold text-foreground tracking-wide">
           BECOMING THE SUCCESS
-        </span>
+        </Link>
 
         <div className="hidden md:flex items-center gap-8">
-          {links.map((link) => (
-            <a key={link} href={`#${link.toLowerCase()}`} className="text-foreground/80 hover:text-gold font-body text-sm tracking-wide transition-colors duration-300">
-              {link}
-            </a>
-          ))}
+          {navLinks.map((link) =>
+            link.hasDropdown ? (
+              <div key={link.label} className="relative" ref={dropdownRef}>
+                <button
+                  onClick={() => setServicesOpen(!servicesOpen)}
+                  className="flex items-center gap-1 text-foreground/80 hover:text-gold font-body text-sm tracking-wide transition-colors duration-300"
+                >
+                  {link.label}
+                  <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-300 ${servicesOpen ? "rotate-180" : ""}`} />
+                </button>
+
+                <AnimatePresence>
+                  {servicesOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 10 }}
+                      transition={{ duration: 0.2 }}
+                      className="absolute top-full mt-3 left-1/2 -translate-x-1/2 w-56 bg-navy-deep/98 backdrop-blur-md border border-border rounded-xl shadow-2xl overflow-hidden"
+                    >
+                      {services.map((svc) => (
+                        <Link
+                          key={svc.slug}
+                          to={`/services/${svc.slug}`}
+                          className="flex items-center gap-3 px-4 py-3 text-sm text-foreground/80 hover:text-gold hover:bg-accent/10 transition-colors font-body"
+                        >
+                          <svc.icon className="w-4 h-4 text-muted-foreground" />
+                          {svc.title}
+                        </Link>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            ) : (
+              <a
+                key={link.label}
+                href={link.href}
+                className="text-foreground/80 hover:text-gold font-body text-sm tracking-wide transition-colors duration-300"
+              >
+                {link.label}
+              </a>
+            )
+          )}
           <button className="px-5 py-2.5 rounded-lg bg-accent text-accent-foreground font-display font-semibold text-sm hover:scale-105 transition-transform">
             Work With Us
           </button>
@@ -50,11 +116,50 @@ const Navbar = () => {
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: "auto" }}
         >
-          {links.map((link) => (
-            <a key={link} href={`#${link.toLowerCase()}`} className="block py-3 text-foreground/80 hover:text-gold font-body transition-colors" onClick={() => setOpen(false)}>
-              {link}
-            </a>
-          ))}
+          {navLinks.map((link) =>
+            link.hasDropdown ? (
+              <div key={link.label}>
+                <button
+                  onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                  className="flex items-center justify-between w-full py-3 text-foreground/80 hover:text-gold font-body transition-colors"
+                >
+                  {link.label}
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${mobileServicesOpen ? "rotate-180" : ""}`} />
+                </button>
+                <AnimatePresence>
+                  {mobileServicesOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                      className="pl-4 overflow-hidden"
+                    >
+                      {services.map((svc) => (
+                        <Link
+                          key={svc.slug}
+                          to={`/services/${svc.slug}`}
+                          className="flex items-center gap-3 py-2 text-sm text-foreground/60 hover:text-gold transition-colors font-body"
+                          onClick={() => setOpen(false)}
+                        >
+                          <svc.icon className="w-4 h-4" />
+                          {svc.title}
+                        </Link>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            ) : (
+              <a
+                key={link.label}
+                href={link.href}
+                className="block py-3 text-foreground/80 hover:text-gold font-body transition-colors"
+                onClick={() => setOpen(false)}
+              >
+                {link.label}
+              </a>
+            )
+          )}
           <button className="mt-3 w-full px-5 py-3 rounded-lg bg-accent text-accent-foreground font-display font-semibold">
             Work With Us
           </button>
