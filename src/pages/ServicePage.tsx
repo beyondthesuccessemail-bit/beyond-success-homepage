@@ -1,4 +1,4 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle, ArrowDown, Phone } from "lucide-react";
 import { useForm } from "react-hook-form";
@@ -25,7 +25,9 @@ const scrollToForm = () => {
 };
 
 const ServicePage = () => {
-  const { slug } = useParams<{ slug: string }>();
+  const { slug: paramSlug } = useParams<{ slug: string }>();
+  const location = useLocation();
+  const slug = paramSlug || location.pathname.split("/").pop() || "";
   const service = services.find((s) => s.slug === slug);
 
   const {
