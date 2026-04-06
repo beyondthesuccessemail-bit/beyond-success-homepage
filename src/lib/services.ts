@@ -10,6 +10,7 @@ export interface ServiceData {
   heroImage?: string;
   features: string[];
   process: { step: string; description: string }[];
+  relatedServices?: { text: string; linkText: string; slug: string }[];
 }
 
 import socialMediaHero from "@/assets/service-social-media-hero.jpg";
