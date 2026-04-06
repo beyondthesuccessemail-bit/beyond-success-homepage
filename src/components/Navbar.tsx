@@ -5,7 +5,7 @@ import { Link, useLocation } from "react-router-dom";
 import { services } from "@/lib/services";
 
 const navLinks = [
-  { label: "About", href: "/#about" },
+  { label: "About", href: "/about", isRoute: true },
   { label: "Services", href: "/#services", hasDropdown: true },
   { label: "Stories", href: "/#stories" },
   { label: "Contact", href: "/#contact" },
@@ -91,6 +91,15 @@ const Navbar = () => {
                 </AnimatePresence>
               </div>
             ) : (
+              link.isRoute ? (
+              <Link
+                key={link.label}
+                to={link.href}
+                className="text-foreground/80 hover:text-gold font-body text-sm tracking-wide transition-colors duration-300"
+              >
+                {link.label}
+              </Link>
+            ) : (
               <a
                 key={link.label}
                 href={link.href}
@@ -98,6 +107,7 @@ const Navbar = () => {
               >
                 {link.label}
               </a>
+            )
             )
           )}
           <button className="px-5 py-2.5 rounded-lg bg-accent text-accent-foreground font-display font-semibold text-sm hover:scale-105 transition-transform">
@@ -150,6 +160,16 @@ const Navbar = () => {
                 </AnimatePresence>
               </div>
             ) : (
+            link.isRoute ? (
+              <Link
+                key={link.label}
+                to={link.href}
+                className="block py-3 text-foreground/80 hover:text-gold font-body transition-colors"
+                onClick={() => setOpen(false)}
+              >
+                {link.label}
+              </Link>
+            ) : (
               <a
                 key={link.label}
                 href={link.href}
@@ -158,6 +178,7 @@ const Navbar = () => {
               >
                 {link.label}
               </a>
+            )
             )
           )}
           <button className="mt-3 w-full px-5 py-3 rounded-lg bg-accent text-accent-foreground font-display font-semibold">
