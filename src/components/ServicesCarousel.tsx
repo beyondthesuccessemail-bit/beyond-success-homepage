@@ -1,18 +1,22 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { ChevronLeft, ChevronRight, Video, Share2, Target, Search, Globe, CreditCard, Mail } from "lucide-react";
-import strategyImg from "@/assets/strategy.jpg";
-import marketingImg from "@/assets/marketing.jpg";
-import interviewImg from "@/assets/interview.jpg";
+import videographyImg from "@/assets/service-videography.jpg";
+import socialMediaImg from "@/assets/service-social-media.jpg";
+import ppcImg from "@/assets/service-ppc.jpg";
+import seoImg from "@/assets/service-seo.jpg";
+import websiteImg from "@/assets/service-website.jpg";
+import paidSocialImg from "@/assets/service-paid-social.jpg";
+import emailImg from "@/assets/service-email.jpg";
 
 const services = [
-  { icon: Video, title: "Videography", desc: "Cinematic video content that captures your brand's story and connects with your audience on a deeper level.", image: interviewImg },
-  { icon: Share2, title: "Social Media", desc: "Organic strategies that build real communities and turn followers into loyal customers.", image: marketingImg },
-  { icon: Target, title: "PPC", desc: "Pay-per-click campaigns that maximise your return on investment and drive qualified leads.", image: strategyImg },
-  { icon: Search, title: "SEO", desc: "Search engine optimisation that puts your brand in front of the right people at the right time.", image: marketingImg },
-  { icon: Globe, title: "Website Design", desc: "Beautiful, high-converting websites that reflect your brand and deliver results.", image: strategyImg },
-  { icon: CreditCard, title: "Paid Social", desc: "Targeted social advertising that reaches your ideal audience and drives measurable growth.", image: interviewImg },
-  { icon: Mail, title: "Email Marketing", desc: "Personalised email campaigns that nurture leads and keep your customers coming back.", image: marketingImg },
+  { icon: Video, title: "Videography", desc: "Cinematic video content that captures your brand's story and connects with your audience on a deeper level.", image: videographyImg },
+  { icon: Share2, title: "Social Media", desc: "Organic strategies that build real communities and turn followers into loyal customers.", image: socialMediaImg },
+  { icon: Target, title: "PPC", desc: "Pay-per-click campaigns that maximise your return on investment and drive qualified leads.", image: ppcImg },
+  { icon: Search, title: "SEO", desc: "Search engine optimisation that puts your brand in front of the right people at the right time.", image: seoImg },
+  { icon: Globe, title: "Website Design", desc: "Beautiful, high-converting websites that reflect your brand and deliver results.", image: websiteImg },
+  { icon: CreditCard, title: "Paid Social", desc: "Targeted social advertising that reaches your ideal audience and drives measurable growth.", image: paidSocialImg },
+  { icon: Mail, title: "Email Marketing", desc: "Personalised email campaigns that nurture leads and keep your customers coming back.", image: emailImg },
 ];
 
 const ServicesCarousel = () => {
