@@ -61,10 +61,28 @@ const ServicePage = () => {
   };
 
   const onSubmit = async (data: EnquiryForm) => {
-    // Simulate submission - replace with actual API call
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    toast.success("Enquiry submitted! We'll be in touch shortly.");
-    reset();
+    try {
+      const res = await fetch("https://formspree.io/f/xlgozrod", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          business: data.business,
+          phone: data.phone,
+          services: data.servicesInterested.join(", "),
+          message: data.message,
+        }),
+      });
+      if (res.ok) {
+        toast.success("Enquiry submitted! We'll be in touch shortly.");
+        reset();
+      } else {
+        toast.error("Something went wrong. Please try again or email us directly.");
+      }
+    } catch {
+      toast.error("Could not send your enquiry. Please check your connection and try again.");
+    }
   };
 
   if (!service) {

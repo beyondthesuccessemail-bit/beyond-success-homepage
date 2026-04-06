@@ -18,15 +18,35 @@ const ContactPage = () => {
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const subject = encodeURIComponent(`Enquiry from ${formData.name} - ${formData.company || "N/A"}`);
-    const body = encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.company}\nService: ${formData.service}\n\n${formData.message}`
-    );
-    window.location.href = `mailto:hello@becomingthesuccess.com?subject=${subject}&body=${body}`;
-    setSubmitted(true);
+    setSending(true);
+    setError("");
+    try {
+      const res = await fetch("https://formspree.io/f/xlgozrod", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          company: formData.company,
+          service: formData.service,
+          message: formData.message,
+        }),
+      });
+      if (res.ok) {
+        setSubmitted(true);
+      } else {
+        setError("Something went wrong. Please try again or email us directly.");
+      }
+    } catch {
+      setError("Could not send your message. Please check your connection and try again.");
+    } finally {
+      setSending(false);
+    }
   };
 
   const contactDetails = [
@@ -156,12 +176,9 @@ const ContactPage = () => {
                   <div className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-4">
                     <Send className="w-7 h-7 text-accent" />
                   </div>
-                  <h3 className="font-display text-2xl font-bold text-foreground mb-2">Your email client should open shortly</h3>
+                  <h3 className="font-display text-2xl font-bold text-foreground mb-2">Message sent!</h3>
                   <p className="text-muted-foreground font-body">
-                    If it did not open,{" "}
-                    <a href="mailto:hello@becomingthesuccess.com" className="text-accent hover:underline">
-                      click here to email us directly
-                    </a>.
+                    Thanks for reaching out. We'll get back to you within 24 hours.
                   </p>
                   <button
                     onClick={() => setSubmitted(false)}
@@ -237,13 +254,17 @@ const ContactPage = () => {
                       placeholder="Tell us about your project and what you are looking to achieve..."
                     />
                   </div>
+                  {error && (
+                    <p className="text-red-400 font-body text-sm">{error}</p>
+                  )}
                   <motion.button
                     type="submit"
-                    className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-accent text-accent-foreground font-display font-bold text-base hover:gap-4 transition-all"
-                    whileHover={{ scale: 1.03 }}
-                    whileTap={{ scale: 0.97 }}
+                    disabled={sending}
+                    className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-accent text-accent-foreground font-display font-bold text-base hover:gap-4 transition-all disabled:opacity-60 disabled:cursor-not-allowed"
+                    whileHover={{ scale: sending ? 1 : 1.03 }}
+                    whileTap={{ scale: sending ? 1 : 0.97 }}
                   >
-                    Send Message <ArrowRight className="w-5 h-5" />
+                    {sending ? "Sending..." : "Send Message"} <ArrowRight className="w-5 h-5" />
                   </motion.button>
                 </form>
               )}
