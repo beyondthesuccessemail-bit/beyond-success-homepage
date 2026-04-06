@@ -18,6 +18,7 @@ import videographyHero from "@/assets/service-videography-hero.jpg";
 import websiteDesignHero from "@/assets/service-website-design-hero.jpg";
 import seoHero from "@/assets/service-seo-hero.jpg";
 import ppcHero from "@/assets/service-ppc-hero.jpg";
+import paidSocialHero from "@/assets/service-paid-social-hero.jpg";
 
 export const services: ServiceData[] = [
   {
