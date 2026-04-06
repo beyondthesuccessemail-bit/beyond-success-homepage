@@ -141,6 +141,10 @@ export const services: ServiceData[] = [
       { step: "Development & SEO Build", description: "Clean, semantic code with structured data, optimised meta tags, fast load times, and a foundation ready for SEO campaigns and PPC landing pages." },
       { step: "Testing & Launch", description: "Rigorous cross-browser and device testing, performance audits, and a smooth deployment with post-launch monitoring." },
     ],
+    relatedServices: [
+      { text: "Once your website is live, drive organic traffic with our", linkText: "search engine optimisation (SEO) services", slug: "seo" },
+      { text: "Maximise your return from day one with", linkText: "targeted PPC campaigns", slug: "ppc" },
+    ],
   },
   {
     icon: CreditCard,
