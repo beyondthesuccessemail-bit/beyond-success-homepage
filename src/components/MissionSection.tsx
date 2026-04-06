@@ -53,7 +53,7 @@ const MissionSection = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/60 to-transparent" />
             </div>
             <motion.div
-              className="absolute bottom-4 left-4 bg-card border-glow rounded-xl p-6"
+              className="absolute bottom-4 left-4 bg-card border-glow rounded-xl p-6 text-center mx-[165px] my-0 py-[24px] px-[24px]"
               animate={{ y: [0, -8, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
             >
