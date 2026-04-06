@@ -17,6 +17,7 @@ const Footer = () => (
         <p className="text-muted-foreground text-sm font-body">
           Marketing that cares. Born from real success stories.
         </p>
+        <a href="mailto:hello@becomingthesuccess.com" className="text-muted-foreground text-sm font-body hover:text-gold transition-colors mt-2 block">hello@becomingthesuccess.com</a>
       </div>
       <div>
         <h4 className="font-display font-bold text-foreground mb-4">Company</h4>
@@ -24,7 +25,6 @@ const Footer = () => (
           <p className="hover:text-gold cursor-pointer transition-colors">About</p>
           <p className="hover:text-gold cursor-pointer transition-colors">Careers</p>
           <p className="hover:text-gold cursor-pointer transition-colors">Contact</p>
-          <a href="mailto:info@becomingthesuccess.com" className="block hover:text-gold transition-colors">info@becomingthesuccess.com</a>
         </div>
       </div>
       <div>
