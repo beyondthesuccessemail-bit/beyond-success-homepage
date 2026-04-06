@@ -64,7 +64,7 @@ export const services: ServiceData[] = [
       { step: "Brief", description: "We sit down with you to understand your vision, brand identity, and the story you want to tell." },
       { step: "Pre-Production", description: "Scriptwriting, storyboarding, shot lists, location scouting, and scheduling the shoot." },
       { step: "Production", description: "Full production day with cinema cameras, lighting rigs, drone operators, and experienced crew on location." },
-      { step: "Post-Production", description: "Expert editing, professional colour grading, sound design, motion graphics, and music licensing." },
+      { step: "Post-Production", description: "Expert editing, professional colour grading, sound design, and music licensing." },
       { step: "Delivery", description: "Final exports optimised for web, social, broadcast, and any other platforms you need." },
     ],
   },
