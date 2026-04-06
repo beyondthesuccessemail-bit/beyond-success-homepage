@@ -160,6 +160,16 @@ const Navbar = () => {
                 </AnimatePresence>
               </div>
             ) : (
+            link.isRoute ? (
+              <Link
+                key={link.label}
+                to={link.href}
+                className="block py-3 text-foreground/80 hover:text-gold font-body transition-colors"
+                onClick={() => setOpen(false)}
+              >
+                {link.label}
+              </Link>
+            ) : (
               <a
                 key={link.label}
                 href={link.href}
@@ -168,6 +178,7 @@ const Navbar = () => {
               >
                 {link.label}
               </a>
+            )
             )
           )}
           <button className="mt-3 w-full px-5 py-3 rounded-lg bg-accent text-accent-foreground font-display font-semibold">
