@@ -7,32 +7,38 @@ export interface ServiceData {
   desc: string;
   heroTagline: string;
   heroDescription: string;
+  heroImage?: string;
   features: string[];
   process: { step: string; description: string }[];
 }
+
+import socialMediaHero from "@/assets/service-social-media-hero.jpg";
 
 export const services: ServiceData[] = [
   {
     icon: Share2,
     title: "Social Media",
     slug: "social-media",
-    desc: "Organic strategies that build real communities and turn followers into loyal customers.",
+    desc: "We film, storyboard, schedule, and report on your short-form social content — end to end.",
     heroTagline: "Build Communities, Not Just Followers",
-    heroDescription: "We craft organic social media strategies that create genuine connections between your brand and your audience. From content creation to community management, we turn your social presence into a revenue-driving machine.",
+    heroDescription: "We don't just manage your socials — we come to you, film short-form content, storyboard creative ideas, schedule everything, and deliver monthly performance reports. From concept to analytics, we handle it all so you can focus on running your business.",
+    heroImage: socialMediaHero,
     features: [
-      "Content Strategy & Calendar Planning",
+      "On-Location Short-Form Content Filming",
+      "Creative Storyboarding & Ideation",
+      "Content Scheduling & Publishing",
+      "Monthly Performance Reports & Analytics",
       "Community Management & Engagement",
+      "Platform-Specific Strategy (TikTok, Reels, Shorts)",
       "Brand Voice Development",
-      "Analytics & Performance Reporting",
       "Influencer Partnership Coordination",
-      "Platform-Specific Content Creation",
     ],
     process: [
-      { step: "Audit", description: "Deep dive into your current social presence, audience demographics, and competitor landscape." },
-      { step: "Strategy", description: "Custom content strategy aligned with your brand goals and audience behaviour." },
-      { step: "Create", description: "Thumb-stopping content designed for each platform's unique algorithm and audience." },
-      { step: "Engage", description: "Active community management that builds loyal brand advocates." },
-      { step: "Optimise", description: "Data-driven refinements to continuously improve reach and engagement." },
+      { step: "Discovery", description: "We meet with you to understand your brand, goals, and target audience. We plan the content themes and messaging." },
+      { step: "Storyboard", description: "Our creative team develops concepts, scripts, and storyboards for your short-form content." },
+      { step: "Film", description: "We come to your location and film professional short-form video content — Reels, TikToks, and Shorts." },
+      { step: "Edit & Schedule", description: "We edit the content, add captions and graphics, then schedule it across your platforms." },
+      { step: "Report", description: "Monthly performance reports showing reach, engagement, growth, and actionable insights for the next month." },
     ],
   },
   {
