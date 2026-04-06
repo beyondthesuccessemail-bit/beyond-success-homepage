@@ -86,8 +86,17 @@ const ServicePage = () => {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative pt-32 pb-20 px-6 overflow-hidden">
-        <div className="absolute inset-0 bg-navy-gradient" />
+      <section className="relative pt-32 pb-20 px-6 overflow-hidden min-h-[60vh] flex items-center">
+        {service.heroImage ? (
+          <>
+            <div className="absolute inset-0">
+              <img src={service.heroImage} alt="" className="w-full h-full object-cover" width={1920} height={800} />
+              <div className="absolute inset-0 bg-navy-deep/80" />
+            </div>
+          </>
+        ) : (
+          <div className="absolute inset-0 bg-navy-gradient" />
+        )}
         <div className="absolute top-20 right-0 w-96 h-96 bg-gold/5 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-0 w-80 h-80 bg-gold/5 rounded-full blur-3xl" />
 
