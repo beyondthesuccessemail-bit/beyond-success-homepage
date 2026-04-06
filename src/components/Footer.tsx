@@ -24,6 +24,7 @@ const Footer = () => (
           <p className="hover:text-gold cursor-pointer transition-colors">About</p>
           <p className="hover:text-gold cursor-pointer transition-colors">Careers</p>
           <p className="hover:text-gold cursor-pointer transition-colors">Contact</p>
+          <a href="mailto:info@becomingthesuccess.com" className="block hover:text-gold transition-colors">info@becomingthesuccess.com</a>
         </div>
       </div>
       <div>
