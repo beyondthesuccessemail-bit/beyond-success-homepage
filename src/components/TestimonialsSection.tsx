@@ -6,13 +6,13 @@ const testimonials = [
   {
     name: "Sarah Mitchell",
     role: "CEO, TechVentures",
-    quote: "Beyond The Success didn't just help us grow, they genuinely cared about our mission. It's rare to find a marketing partner that feels like family.",
+    quote: "Becoming The Success didn't just help us grow, they genuinely cared about our mission. It's rare to find a marketing partner that feels like family.",
     stars: 5,
   },
   {
     name: "Marcus Johnson",
     role: "Founder, GreenLeaf Co.",
-    quote: "After being interviewed on Beyond The Success podcast, they helped us turn our story into a full brand campaign. Revenue up 340% in 8 months.",
+    quote: "After being interviewed on the Beyond The Success podcast, Becoming The Success helped us turn our story into a full brand campaign. Revenue up 340% in 8 months.",
     stars: 5,
   },
   {
