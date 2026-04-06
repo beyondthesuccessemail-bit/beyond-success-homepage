@@ -36,7 +36,7 @@ export const services: ServiceData[] = [
     process: [
       { step: "Discovery", description: "We meet with you to understand your brand, goals, and target audience. We plan the content themes and messaging." },
       { step: "Storyboard", description: "Our creative team develops concepts, scripts, and storyboards for your short-form content." },
-      { step: "Film", description: "We come to your location and film professional short-form video content — Reels, TikToks, and Shorts." },
+      { step: "Film", description: "We come to your location and film professional short-form video content for Reels, TikToks, and Shorts." },
       { step: "Edit & Schedule", description: "We edit the content, add captions and graphics, then schedule it across your platforms." },
       { step: "Report", description: "Monthly performance reports showing reach, engagement, growth, and actionable insights for the next month." },
     ],
