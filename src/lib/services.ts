@@ -126,8 +126,8 @@ export const services: ServiceData[] = [
     heroImage: websiteDesignHero,
     features: [
       "Bespoke Website Design & Development from Scratch",
-      "SEO-Ready Architecture & Clean URL Structures",
-      "PPC-Optimised Landing Pages & Conversion Funnels",
+      "Search-Friendly Architecture & Clean URL Structures",
+      "Conversion-Optimised Landing Pages & Funnels",
       "Responsive & Mobile-First Design",
       "Performance-Optimised for Core Web Vitals",
       "E-commerce Solutions (Shopify, WooCommerce, Custom)",
