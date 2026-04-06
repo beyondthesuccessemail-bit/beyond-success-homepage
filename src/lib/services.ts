@@ -122,7 +122,7 @@ export const services: ServiceData[] = [
     slug: "website-design",
     desc: "Bespoke, high-performance websites built from scratch, designed to look stunning and engineered to rank, convert, and scale.",
     heroTagline: "Websites Built to Perform",
-    heroDescription: "We don't just design websites, we build digital platforms made for growth. Every site we create is crafted from scratch with clean code, fast load times, and a structure that sets you up for long-term success with search engine optimisation and pay-per-click advertising. Whether you need a brand-new site or a complete rebuild, we deliver a website that looks world-class and works even harder behind the scenes.",
+    heroDescription: "We don't just design websites, we build digital platforms made for growth. Every site we create is crafted from scratch with clean code, fast load times, and a structure built to convert. Whether you need a brand-new site or a complete rebuild, we deliver a website that looks world-class and works even harder behind the scenes.",
     heroImage: websiteDesignHero,
     features: [
       "Bespoke Website Design & Development from Scratch",
