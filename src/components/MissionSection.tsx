@@ -48,7 +48,7 @@ const MissionSection = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.9, delay: 0.2 }}
           >
-            <div className="relative rounded-2xl overflow-hidden glow-gold">
+            <div className="relative rounded-2xl overflow-hidden glow-gold max-w-sm mx-auto">
               <img src={caringImg} alt="Young entrepreneur smiling" className="w-full h-auto aspect-square object-cover" loading="lazy" width={600} height={600} />
               <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/60 to-transparent" />
             </div>
