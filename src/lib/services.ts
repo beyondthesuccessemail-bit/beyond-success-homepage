@@ -13,6 +13,7 @@ export interface ServiceData {
 }
 
 import socialMediaHero from "@/assets/service-social-media-hero.jpg";
+import videographyHero from "@/assets/service-videography-hero.jpg";
 
 export const services: ServiceData[] = [
   {
