@@ -31,10 +31,15 @@ const Footer = () => (
       <div>
         <h4 className="font-display font-bold text-foreground mb-4">Follow Us</h4>
         <div className="flex gap-3">
-          {[Instagram, Twitter, Linkedin, Youtube].map((Icon, i) => (
-            <div key={i} className="w-10 h-10 rounded-full border-glow flex items-center justify-center hover:bg-accent hover:text-accent-foreground cursor-pointer transition-colors">
+          {[
+            { Icon: Instagram, href: "https://www.instagram.com/beyond.the.success" },
+            { Icon: Twitter, href: "#" },
+            { Icon: Linkedin, href: "#" },
+            { Icon: Youtube, href: "#" },
+          ].map(({ Icon, href }, i) => (
+            <a key={i} href={href} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border-glow flex items-center justify-center hover:bg-accent hover:text-accent-foreground cursor-pointer transition-colors">
               <Icon className="w-4 h-4" />
-            </div>
+            </a>
           ))}
         </div>
       </div>
