@@ -1,5 +1,7 @@
 import logo from "@/assets/logo.png";
 import { Instagram, Youtube } from "lucide-react";
+import { Link } from "react-router-dom";
+import { services } from "@/lib/services";
 
 const TikTokIcon = ({ className }: { className?: string }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -20,18 +22,22 @@ const Footer = () => (
         <h4 className="font-display font-bold text-foreground mb-4">Company</h4>
         <div className="space-y-2 text-sm text-muted-foreground font-body">
           <p className="hover:text-gold cursor-pointer transition-colors">About</p>
-          <p className="hover:text-gold cursor-pointer transition-colors">Services</p>
           <p className="hover:text-gold cursor-pointer transition-colors">Careers</p>
           <p className="hover:text-gold cursor-pointer transition-colors">Contact</p>
         </div>
       </div>
       <div>
-        <h4 className="font-display font-bold text-foreground mb-4">Resources</h4>
+        <h4 className="font-display font-bold text-foreground mb-4">Services</h4>
         <div className="space-y-2 text-sm text-muted-foreground font-body">
-          <p className="hover:text-gold cursor-pointer transition-colors">Blog</p>
-          <p className="hover:text-gold cursor-pointer transition-colors">Podcast</p>
-          <p className="hover:text-gold cursor-pointer transition-colors">Case Studies</p>
-          <p className="hover:text-gold cursor-pointer transition-colors">Newsletter</p>
+          {services.map((svc) => (
+            <Link
+              key={svc.slug}
+              to={`/services/${svc.slug}`}
+              className="block hover:text-gold transition-colors"
+            >
+              {svc.title}
+            </Link>
+          ))}
         </div>
       </div>
       <div>
