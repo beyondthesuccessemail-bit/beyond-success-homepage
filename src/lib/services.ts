@@ -19,9 +19,9 @@ export const services: ServiceData[] = [
     icon: Share2,
     title: "Social Media",
     slug: "social-media",
-    desc: "We film, storyboard, schedule, and report on your short-form social content — end to end.",
+    desc: "We film, storyboard, schedule, and report on your short-form social content, end to end.",
     heroTagline: "Build Communities, Not Just Followers",
-    heroDescription: "We don't just manage your socials — we come to you, film short-form content, storyboard creative ideas, schedule everything, and deliver monthly performance reports. From concept to analytics, we handle it all so you can focus on running your business.",
+    heroDescription: "We don't just manage your socials. We come to you, film short-form content, storyboard creative ideas, schedule everything, and deliver monthly performance reports. From concept to analytics, we handle it all so you can focus on running your business.",
     heroImage: socialMediaHero,
     features: [
       "On-Location Short-Form Content Filming",
@@ -36,7 +36,7 @@ export const services: ServiceData[] = [
     process: [
       { step: "Discovery", description: "We meet with you to understand your brand, goals, and target audience. We plan the content themes and messaging." },
       { step: "Storyboard", description: "Our creative team develops concepts, scripts, and storyboards for your short-form content." },
-      { step: "Film", description: "We come to your location and film professional short-form video content — Reels, TikToks, and Shorts." },
+      { step: "Film", description: "We come to your location and film professional short-form video content for Reels, TikToks, and Shorts." },
       { step: "Edit & Schedule", description: "We edit the content, add captions and graphics, then schedule it across your platforms." },
       { step: "Report", description: "Monthly performance reports showing reach, engagement, growth, and actionable insights for the next month." },
     ],
@@ -116,7 +116,7 @@ export const services: ServiceData[] = [
     slug: "website-design",
     desc: "Beautiful, high-converting websites that reflect your brand and deliver results.",
     heroTagline: "Design That Converts",
-    heroDescription: "We design and build stunning websites that don't just look good — they drive results. Every pixel is intentional, every interaction is optimised for conversion.",
+    heroDescription: "We design and build stunning websites that don't just look good, they drive results. Every pixel is intentional, every interaction is optimised for conversion.",
     features: [
       "Custom Website Design & Development",
       "E-commerce Solutions",

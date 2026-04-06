@@ -61,7 +61,7 @@ const ServicePage = () => {
   };
 
   const onSubmit = async (data: EnquiryForm) => {
-    // Simulate submission — replace with actual API call
+    // Simulate submission - replace with actual API call
     await new Promise((resolve) => setTimeout(resolve, 1000));
     toast.success("Enquiry submitted! We'll be in touch shortly.");
     reset();
