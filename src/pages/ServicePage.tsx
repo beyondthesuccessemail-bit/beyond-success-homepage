@@ -226,6 +226,38 @@ const ServicePage = () => {
         </div>
       </section>
 
+      {/* Related Services */}
+      {service.relatedServices && service.relatedServices.length > 0 && (
+        <section className="px-6 py-16 bg-card/30">
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <span className="text-gold font-body text-sm tracking-widest uppercase mb-4 block text-center">Go Further</span>
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-8 text-center">
+                Supercharge Your <span className="text-gradient-gold">Website</span>
+              </h2>
+              <div className="space-y-4">
+                {service.relatedServices.map((rs) => (
+                  <div key={rs.slug} className="p-6 rounded-xl bg-card/60 border-glow flex items-center gap-4">
+                    <ArrowRight className="w-5 h-5 text-gold shrink-0" />
+                    <p className="font-body text-muted-foreground text-lg">
+                      {rs.text}{" "}
+                      <Link to={`/services/${rs.slug}`} className="text-gold hover:text-gold/80 underline underline-offset-4 font-semibold transition-colors">
+                        {rs.linkText}
+                      </Link>.
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      )}
+
       {/* CTA Banner */}
       <section className="px-6 py-16 bg-accent/5 border-y border-gold/10">
         <div className="max-w-4xl mx-auto text-center">
