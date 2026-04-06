@@ -49,7 +49,7 @@ const MissionSection = () => {
             transition={{ duration: 0.9, delay: 0.2 }}
           >
             <div className="relative rounded-2xl overflow-hidden glow-gold">
-              <img src={caringImg} alt="Entrepreneur smiling at their workspace" className="w-full h-auto" loading="lazy" width={1280} height={720} />
+              <img src={caringImg} alt="Young entrepreneur smiling" className="w-full h-auto aspect-square object-cover" loading="lazy" width={600} height={600} />
               <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/60 to-transparent" />
             </div>
             <motion.div
