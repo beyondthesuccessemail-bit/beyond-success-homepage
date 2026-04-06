@@ -34,7 +34,7 @@ const Footer = () => (
           {[
             { Icon: Instagram, href: "https://www.instagram.com/beyond.the.success" },
             { Icon: Youtube, href: "https://www.youtube.com/channel/UC7U1EqGUfl3iz7Qa0geKFQw" },
-            { Icon: Youtube, href: "https://www.youtube.com/channel/UC7U1EqGUfl3iz7Qa0geKFQw" },
+            { Icon: TikTokIcon, href: "https://www.tiktok.com/@beyond.thesuccess?_r=1&_t=ZN-95JUBFNlsLy" },
           ].map(({ Icon, href }, i) => (
             <a key={i} href={href} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border-glow flex items-center justify-center hover:bg-accent hover:text-accent-foreground cursor-pointer transition-colors">
               <Icon className="w-4 h-4" />
