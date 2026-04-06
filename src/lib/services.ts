@@ -17,6 +17,7 @@ import socialMediaHero from "@/assets/service-social-media-hero.jpg";
 import videographyHero from "@/assets/service-videography-hero.jpg";
 import websiteDesignHero from "@/assets/service-website-design-hero.jpg";
 import seoHero from "@/assets/service-seo-hero.jpg";
+import ppcHero from "@/assets/service-ppc-hero.jpg";
 
 export const services: ServiceData[] = [
   {
@@ -75,23 +76,26 @@ export const services: ServiceData[] = [
     icon: Target,
     title: "PPC",
     slug: "ppc",
-    desc: "Pay-per-click campaigns that maximise your return on investment and drive qualified leads.",
+    desc: "Strategic pay-per-click advertising that puts your business in front of high-intent buyers and delivers measurable returns.",
     heroTagline: "Every Click Counts",
-    heroDescription: "Our data-driven PPC campaigns put your brand in front of high-intent buyers. We manage Google Ads, Bing Ads, and display networks to maximise your ROI.",
+    heroDescription: "We build and manage pay-per-click campaigns that turn ad spend into revenue. From Google Ads to Bing and display networks, every campaign is structured around your goals, your audience, and your bottom line. We handle the research, the setup, the optimisation, and the reporting so you get results without the guesswork.",
+    heroImage: ppcHero,
     features: [
-      "Google Ads Management",
+      "Google Ads Search & Display Management",
       "Bing Ads & Microsoft Advertising",
-      "Display & Remarketing Campaigns",
-      "Shopping & E-commerce Ads",
-      "Conversion Tracking & Attribution",
-      "A/B Testing & Landing Page Optimisation",
+      "Shopping & E-commerce Ad Campaigns",
+      "Remarketing & Retargeting Strategies",
+      "Conversion Tracking & Attribution Setup",
+      "A/B Testing & Ad Copy Optimisation",
+      "Landing Page Strategy & Alignment",
+      "Transparent Budget Management & Reporting",
     ],
     process: [
-      { step: "Research", description: "Keyword research, competitor analysis, and audience targeting strategy." },
-      { step: "Build", description: "Campaign structure, ad copy creation, and landing page alignment." },
-      { step: "Launch", description: "Strategic campaign rollout with controlled budget allocation." },
-      { step: "Monitor", description: "Real-time performance tracking and bid management." },
-      { step: "Scale", description: "Data-driven scaling of winning campaigns and pruning of underperformers." },
+      { step: "Research", description: "In-depth keyword research, competitor analysis, and audience targeting to build a strategy that reaches the right people at the right time." },
+      { step: "Build", description: "Campaign structure, compelling ad copy, keyword grouping, and landing page alignment designed to maximise quality scores and conversions." },
+      { step: "Launch", description: "Strategic rollout with controlled budget allocation, ensuring your spend is focused where it will have the greatest impact." },
+      { step: "Optimise", description: "Continuous performance monitoring, bid adjustments, ad testing, and refinement to improve results week on week." },
+      { step: "Scale", description: "Data-driven scaling of winning campaigns while cutting underperformers, so your return on ad spend keeps growing." },
     ],
   },
   {
