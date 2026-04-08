@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const services = [
   { label: "WEBSITE DESIGN", href: "/services/website-design" },
-  { label: "SOCIAL MEDIA", href: "/services/social-media" },
+
   { label: "CONTENT", href: "/services/social-media" },
   { label: "EMAIL MARKETING", href: "/services/email-marketing" },
   { label: "VIDEOGRAPHY", href: "/services/videography" },

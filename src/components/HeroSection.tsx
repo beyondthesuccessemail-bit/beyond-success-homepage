@@ -109,8 +109,8 @@ const HeroSection = () => {
 
       {/* Scroll indicator */}
       <motion.div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
-        animate={{ y: [0, 10, 0] }}
+        className="absolute bottom-8 left-1/2"
+        animate={{ x: "-50%", y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
       >
         <div className="w-6 h-10 rounded-full border-2 border-gold/30 flex justify-center pt-2">

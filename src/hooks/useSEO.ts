@@ -28,6 +28,6 @@ export const useSEO = ({ title, description }: SEOProps) => {
       canonical.setAttribute("rel", "canonical");
       document.head.appendChild(canonical);
     }
-    canonical.setAttribute("href", `https://becomingthesuccess.com${window.location.pathname}`);
+    canonical.setAttribute("href", `https://www.becomingthesuccess.com${window.location.pathname}`);
   }, [title, description]);
 };
