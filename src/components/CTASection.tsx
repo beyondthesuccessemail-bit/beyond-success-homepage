@@ -1,6 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const CTASection = () => {
   const ref = useRef(null);
@@ -23,13 +24,15 @@ const CTASection = () => {
           Let's write your success story together. Join the founders who chose a
           marketing partner that truly cares.
         </p>
-        <motion.button
-          className="inline-flex items-center gap-3 px-10 py-5 rounded-xl bg-accent text-accent-foreground font-display font-bold text-xl glow-gold hover:gap-5 transition-all duration-300"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.98 }}
-        >
-          Get Started <ArrowRight className="w-6 h-6" />
-        </motion.button>
+        <Link to="/contact">
+          <motion.span
+            className="inline-flex items-center gap-3 px-10 py-5 rounded-xl bg-accent text-accent-foreground font-display font-bold text-xl glow-gold hover:gap-5 transition-all duration-300 cursor-pointer"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            Get Started <ArrowRight className="w-6 h-6" />
+          </motion.span>
+        </Link>
       </motion.div>
     </section>
   );

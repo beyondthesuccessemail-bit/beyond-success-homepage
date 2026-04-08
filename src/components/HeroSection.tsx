@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import heroVideo from "@/assets/hero-video-v2.mp4.asset.json";
+import { Link } from "react-router-dom";
+import heroVideo from "@/assets/website-banner-video.mp4";
 
 const HeroSection = () => {
   return (
@@ -7,7 +8,7 @@ const HeroSection = () => {
       {/* Background Video */}
       <div className="absolute inset-0">
         <video
-          src={heroVideo.url}
+          src={heroVideo}
           autoPlay
           muted
           loop
@@ -79,12 +80,18 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.1 }}
         >
-          <button className="px-8 py-4 rounded-lg bg-accent text-accent-foreground font-display font-semibold text-lg glow-gold hover:scale-105 transition-transform duration-300">
+          <Link
+            to="/contact"
+            className="px-8 py-4 rounded-lg bg-accent text-accent-foreground font-display font-semibold text-lg glow-gold hover:scale-105 transition-transform duration-300 inline-block"
+          >
             Start Your Journey
-          </button>
-          <button className="px-8 py-4 rounded-lg border-glow text-foreground font-display font-semibold text-lg hover:bg-foreground/5 transition-colors duration-300">
+          </Link>
+          <a
+            href="#services"
+            className="px-8 py-4 rounded-lg border-glow text-foreground font-display font-semibold text-lg hover:bg-foreground/5 transition-colors duration-300 inline-block"
+          >
             Learn More
-          </button>
+          </a>
         </motion.div>
       </div>
 

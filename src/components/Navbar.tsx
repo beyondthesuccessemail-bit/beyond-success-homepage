@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { services } from "@/lib/services";
-import logo from "@/assets/logo.png";
+import becomingLogo from "@/assets/Becoming The Success Logo.png";
 
 const navLinks = [
   { label: "About", href: "/about", isRoute: true },
@@ -49,9 +49,9 @@ const Navbar = () => {
       animate={{ y: 0 }}
       transition={{ duration: 0.6 }}
     >
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="w-full px-6 md:px-10 lg:px-16 py-4 flex items-center justify-between">
         <Link to="/" className="flex items-center">
-          <img src={logo} alt="Beyond The Success" className="h-8 w-auto object-contain" />
+          <img src={becomingLogo} alt="Becoming The Success" className="h-6 md:h-8 lg:h-10 w-auto object-contain" />
         </Link>
 
         <div className="hidden md:flex items-center gap-8">
