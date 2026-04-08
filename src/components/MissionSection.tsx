@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Heart, Users, TrendingUp, Sparkles } from "lucide-react";
-import caringImg from "@/assets/caring-person.jpg";
+import caringImg from "@/assets/We Care About People Happy Woman.png";
 
 const values = [
   { icon: Heart, title: "People First", desc: "Every strategy starts with understanding the humans behind the brand." },
