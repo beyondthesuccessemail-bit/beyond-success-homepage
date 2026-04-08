@@ -53,7 +53,7 @@ const ServicesCarousel = () => {
         >
           <motion.div
             key={current}
-            className="grid md:grid-cols-2 h-[450px]"
+            className="grid md:grid-cols-2 md:h-[450px]"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -50 }}
@@ -74,7 +74,7 @@ const ServicesCarousel = () => {
                 Learn More
               </button>
             </div>
-            <div className="relative h-full overflow-hidden">
+            <div className="relative h-64 md:h-full overflow-hidden">
               <img
                 src={services[current].image}
                 alt={services[current].title}
