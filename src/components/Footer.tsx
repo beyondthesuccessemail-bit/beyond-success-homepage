@@ -13,7 +13,7 @@ const Footer = () => (
   <footer className="bg-navy-deep border-t border-border px-6 py-12">
     <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-8">
       <div>
-        <img src={logo} alt="Beyond The Success" className="h-10 w-auto mb-4 object-contain" />
+        <img src={logo} alt="Beyond The Success" className="h-16 w-auto mb-4 object-contain" />
         <p className="text-muted-foreground text-sm font-body">
           Marketing that cares. Born from real success stories.
         </p>
