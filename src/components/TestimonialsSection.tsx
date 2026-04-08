@@ -4,26 +4,26 @@ import { Quote, ChevronLeft, ChevronRight, Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Sarah Mitchell",
-    role: "CEO, TechVentures",
+    name: "Sarah",
+    role: "CEO",
     quote: "Becoming The Success didn't just help us grow, they genuinely cared about our mission. It's rare to find a marketing partner that feels like family.",
     stars: 5,
   },
   {
-    name: "Marcus Johnson",
-    role: "Founder, GreenLeaf Co.",
+    name: "Marcus",
+    role: "Founder",
     quote: "After being interviewed on the Becoming The Success podcast, Becoming The Success helped us turn our story into a full brand campaign. Revenue up 340% in 8 months.",
     stars: 5,
   },
   {
-    name: "Emily Rodriguez",
-    role: "COO, Pulse Health",
+    name: "Emily",
+    role: "COO",
     quote: "The team truly listens. They understood our vision before we could even articulate it. That's the difference between an agency and a partner.",
     stars: 5,
   },
   {
-    name: "David Chen",
-    role: "CTO, NovaBuild",
+    name: "David",
+    role: "CTO",
     quote: "They took our complex tech product and made it human. Our brand now connects with people on an emotional level we never thought possible.",
     stars: 5,
   },

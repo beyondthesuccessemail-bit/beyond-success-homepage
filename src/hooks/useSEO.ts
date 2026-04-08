@@ -20,5 +20,14 @@ export const useSEO = ({ title, description }: SEOProps) => {
       document.head.appendChild(metaDesc);
     }
     metaDesc.setAttribute("content", description);
+
+    // Self-referencing canonical URL
+    let canonical = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement("link");
+      canonical.setAttribute("rel", "canonical");
+      document.head.appendChild(canonical);
+    }
+    canonical.setAttribute("href", `https://becomingthesuccess.com${window.location.pathname}`);
   }, [title, description]);
 };

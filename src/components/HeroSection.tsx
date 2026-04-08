@@ -104,12 +104,6 @@ const HeroSection = () => {
           >
             Start Your Journey
           </Link>
-          <a
-            href="#services"
-            className="px-8 py-4 rounded-lg border-glow text-foreground font-display font-semibold text-lg hover:bg-foreground/5 transition-colors duration-300 inline-block"
-          >
-            Learn More
-          </a>
         </motion.div>
       </div>
 
