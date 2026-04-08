@@ -1,18 +1,36 @@
+import { useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import heroVideo from "@/assets/website-banner-video.mp4";
 
 const HeroSection = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video) {
+      // Programmatically set muted to work around React's known bug
+      // where the muted attribute isn't properly applied to the DOM element.
+      // Desktop Chrome blocks autoplay if it doesn't detect muted on the element.
+      video.muted = true;
+      video.play().catch(() => {
+        // Autoplay was prevented — silently handle
+      });
+    }
+  }, []);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Video */}
       <div className="absolute inset-0">
         <video
+          ref={videoRef}
           src={heroVideo}
           autoPlay
           muted
           loop
           playsInline
+          preload="auto"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-navy-gradient opacity-60" />
