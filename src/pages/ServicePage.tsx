@@ -8,6 +8,7 @@ import { toast } from "sonner";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { services } from "@/lib/services";
+import { useSEO } from "@/hooks/useSEO";
 
 const enquirySchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100, "Name must be less than 100 characters"),
@@ -29,6 +30,11 @@ const ServicePage = () => {
   const location = useLocation();
   const slug = paramSlug || location.pathname.split("/").pop() || "";
   const service = services.find((s) => s.slug === slug);
+
+  useSEO({
+    title: service?.metaTitle ?? "Our Services - Becoming The Success",
+    description: service?.metaDescription ?? "Explore our full range of marketing services. Social media, SEO, PPC, videography, web design, paid social & email marketing. Get in touch today.",
+  });
 
   const {
     register,
@@ -143,12 +149,12 @@ const ServicePage = () => {
               >
                 Get A Free Quote <ArrowDown className="w-5 h-5" />
               </button>
-              <a
-                href="tel:+441234567890"
+              <Link
+                to="/contact"
                 className="px-8 py-4 rounded-lg border-glow text-foreground font-display font-semibold text-lg hover:bg-foreground/5 transition-colors duration-300 flex items-center gap-2"
               >
-                <Phone className="w-5 h-5" /> Contact Us Now
-              </a>
+                <Phone className="w-5 h-5" /> Contact Us
+              </Link>
             </div>
           </motion.div>
         </div>
@@ -298,12 +304,12 @@ const ServicePage = () => {
               >
                 Get Your Free Quote <ArrowDown className="w-5 h-5" />
               </button>
-              <a
-                href="tel:+441234567890"
+              <Link
+                to="/contact"
                 className="px-8 py-4 rounded-lg border-glow text-foreground font-display font-semibold text-lg hover:bg-foreground/5 transition-colors duration-300 flex items-center gap-2 justify-center"
               >
-                <Phone className="w-5 h-5" /> Call Us Now
-              </a>
+                <Phone className="w-5 h-5" /> Contact Us
+              </Link>
             </div>
           </motion.div>
         </div>

@@ -23,7 +23,6 @@ const Footer = () => (
         <h4 className="font-display font-bold text-foreground mb-4">Company</h4>
         <div className="space-y-2 text-sm text-muted-foreground font-body">
           <Link to="/about" className="block hover:text-gold transition-colors">About</Link>
-          <p className="hover:text-gold cursor-pointer transition-colors">Careers</p>
           <Link to="/contact" className="block hover:text-gold transition-colors">Contact</Link>
         </div>
       </div>

@@ -8,8 +8,14 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import BeyondSection from "@/components/BeyondSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import { useSEO } from "@/hooks/useSEO";
 
-const Index = () => (
+const Index = () => {
+  useSEO({
+    title: "Marketing Agency That Cares - Becoming The Success",
+    description: "Full-service marketing agency born from real entrepreneur stories. Social media, SEO, PPC, videography & web design. Get your free quote today.",
+  });
+  return (
   <div className="min-h-screen bg-background">
     <Navbar />
     <HeroSection />
@@ -22,6 +28,7 @@ const Index = () => (
     <CTASection />
     <Footer />
   </div>
-);
+  );
+};
 
 export default Index;

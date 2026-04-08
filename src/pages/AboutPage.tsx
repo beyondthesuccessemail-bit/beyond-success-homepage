@@ -1,11 +1,14 @@
 import { motion, useInView, useMotionValue, useTransform, useSpring } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 import { Video, Users, Rocket, Globe, ArrowRight, Star, TrendingUp, Handshake } from "lucide-react";
+import { Link } from "react-router-dom";
+import { useSEO } from "@/hooks/useSEO";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import aboutHero from "@/assets/about-hero.jpg";
-import teamAlfie from "@/assets/team-alfie.jpg";
-import teamGeorge from "@/assets/team-george.jpg";
+import aboutHero from "@/assets/About Us Banner Becoming The Success.webp";
+import aboutHeroMobile from "@/assets/Mobile Hero banner Becoming The Success.webp";
+import teamAlfie from "@/assets/Becoming The Success CEO 2.png";
+import teamGeorge from "@/assets/Becoming The Success CEO.png";
 import workspaceImg from "@/assets/about-workspace.jpg";
 
 /* ── Cursor-following spotlight ── */
@@ -119,22 +122,31 @@ const AboutPage = () => {
   const teamRef = useRef(null);
   const teamInView = useInView(teamRef, { once: true, margin: "-100px" });
 
+  useSEO({
+    title: "About Us | Marketing Agency - Becoming The Success",
+    description: "A marketing agency built from real entrepreneur stories. Discover how Becoming The Success helps growing businesses stand out. Meet our founding team.",
+  });
+
   return (
     <div className="min-h-screen bg-background overflow-hidden">
       <Navbar />
       <CursorSpotlight />
 
       {/* ── Hero ── */}
-      <section ref={heroRef} className="relative h-[85vh] min-h-[600px] flex items-center justify-center">
-        <div className="absolute inset-0">
-          <img
-            src={aboutHero}
-            alt="Alfie and George filming an entrepreneur interview in a professional studio"
-            className="w-full h-full object-cover"
-            width={1920}
-            height={1080}
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/50 to-background" />
+      <section ref={heroRef} className="relative h-[88vh] min-h-[380px] md:h-[85vh] md:min-h-[600px] flex items-center justify-center">
+        <div className="absolute inset-0 bg-navy-deep">
+          <picture className="w-full h-full">
+            <source media="(max-width: 767px)" srcSet={aboutHeroMobile} />
+            <source media="(min-width: 768px)" srcSet={aboutHero} />
+            <img
+              src={aboutHero}
+              alt="Alfie and George filming an entrepreneur interview in a professional studio"
+              className="w-full h-full object-cover object-top md:object-center"
+              width={1920}
+              height={1080}
+            />
+          </picture>
+          <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-transparent to-background" />
         </div>
 
         <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
@@ -362,14 +374,12 @@ const AboutPage = () => {
           <p className="text-muted-foreground font-body text-lg mb-8">
             Whether you need social media content, a brand-new website or a full marketing strategy, we are here to help your business grow.
           </p>
-          <motion.a
-            href="/#contact"
+          <Link
+            to="/contact"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-accent text-accent-foreground font-display font-bold text-lg hover:gap-4 transition-all"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.97 }}
           >
             Get In Touch <ArrowRight className="w-5 h-5" />
-          </motion.a>
+          </Link>
         </motion.div>
       </section>
 

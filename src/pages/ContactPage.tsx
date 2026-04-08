@@ -3,12 +3,18 @@ import { useRef, useState } from "react";
 import { Mail, Send, MapPin, ArrowRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { useSEO } from "@/hooks/useSEO";
 
 const ContactPage = () => {
   const heroRef = useRef(null);
   const heroInView = useInView(heroRef, { once: true });
   const formRef = useRef(null);
   const formInView = useInView(formRef, { once: true, margin: "-80px" });
+
+  useSEO({
+    title: "Work With Us | Get In Touch - Becoming The Success",
+    description: "Ready to grow? Get in touch with Becoming The Success today. Tell us about your business and we'll build a bespoke marketing strategy just for you.",
+  });
 
   const [formData, setFormData] = useState({
     name: "",

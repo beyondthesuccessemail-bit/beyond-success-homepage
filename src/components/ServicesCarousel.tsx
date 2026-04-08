@@ -1,5 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import { ChevronLeft, ChevronRight, Video, Share2, Target, Search, Globe, CreditCard, Mail } from "lucide-react";
 import videographyImg from "@/assets/Videography Service Image.webp";
 import socialMediaImg from "@/assets/Social Media Services.png";
@@ -10,13 +11,13 @@ import paidSocialImg from "@/assets/Paid Social Ads Service.png";
 import emailImg from "@/assets/email marketing services.png";
 
 const services = [
-  { icon: Video, title: "Videography", desc: "Cinematic video content that captures your brand's story and connects with your audience on a deeper level.", image: videographyImg },
-  { icon: Share2, title: "Social Media", desc: "Organic strategies that build real communities and turn followers into loyal customers.", image: socialMediaImg },
-  { icon: Target, title: "PPC", desc: "Pay-per-click campaigns that maximise your return on investment and drive qualified leads.", image: ppcImg },
-  { icon: Search, title: "SEO", desc: "Search engine optimisation that puts your brand in front of the right people at the right time.", image: seoImg },
-  { icon: Globe, title: "Website Design", desc: "Beautiful, high-converting websites that reflect your brand and deliver results.", image: websiteImg },
-  { icon: CreditCard, title: "Paid Social", desc: "Targeted social advertising that reaches your ideal audience and drives measurable growth.", image: paidSocialImg },
-  { icon: Mail, title: "Email Marketing", desc: "Personalised email campaigns that nurture leads and keep your customers coming back.", image: emailImg },
+  { icon: Video, title: "Videography", slug: "videography", desc: "Cinematic video content that captures your brand's story and connects with your audience on a deeper level.", image: videographyImg },
+  { icon: Share2, title: "Social Media", slug: "social-media", desc: "Organic strategies that build real communities and turn followers into loyal customers.", image: socialMediaImg },
+  { icon: Target, title: "PPC", slug: "ppc", desc: "Pay-per-click campaigns that maximise your return on investment and drive qualified leads.", image: ppcImg },
+  { icon: Search, title: "SEO", slug: "seo", desc: "Search engine optimisation that puts your brand in front of the right people at the right time.", image: seoImg },
+  { icon: Globe, title: "Website Design", slug: "website-design", desc: "Beautiful, high-converting websites that reflect your brand and deliver results.", image: websiteImg },
+  { icon: CreditCard, title: "Paid Social", slug: "paid-social", desc: "Targeted social advertising that reaches your ideal audience and drives measurable growth.", image: paidSocialImg },
+  { icon: Mail, title: "Email Marketing", slug: "email-marketing", desc: "Personalised email campaigns that nurture leads and keep your customers coming back.", image: emailImg },
 ];
 
 const ServicesCarousel = () => {
@@ -70,9 +71,12 @@ const ServicesCarousel = () => {
               <p className="text-muted-foreground text-lg font-body mb-6">
                 {services[current].desc}
               </p>
-              <button className="self-start px-6 py-3 rounded-lg bg-accent text-accent-foreground font-display font-semibold hover:scale-105 transition-transform">
+              <Link
+                to={`/services/${services[current].slug}`}
+                className="self-start px-6 py-3 rounded-lg bg-accent text-accent-foreground font-display font-semibold hover:scale-105 transition-transform"
+              >
                 Learn More
-              </button>
+              </Link>
             </div>
             <div className="relative h-64 md:h-full overflow-hidden">
               <img
