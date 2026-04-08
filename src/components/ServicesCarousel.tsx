@@ -1,13 +1,13 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { ChevronLeft, ChevronRight, Video, Share2, Target, Search, Globe, CreditCard, Mail } from "lucide-react";
-import videographyImg from "@/assets/service-videography.jpg";
-import socialMediaImg from "@/assets/service-social-media.jpg";
-import ppcImg from "@/assets/service-ppc.jpg";
-import seoImg from "@/assets/service-seo.jpg";
-import websiteImg from "@/assets/service-website.jpg";
-import paidSocialImg from "@/assets/service-paid-social.jpg";
-import emailImg from "@/assets/service-email.jpg";
+import videographyImg from "@/assets/Videography Service Image.webp";
+import socialMediaImg from "@/assets/Social Media Services.png";
+import ppcImg from "@/assets/Google Ads Services.webp";
+import seoImg from "@/assets/seo-services-upscaled.png";
+import websiteImg from "@/assets/web design image.png";
+import paidSocialImg from "@/assets/Paid Social Ads Service.png";
+import emailImg from "@/assets/email marketing services.png";
 
 const services = [
   { icon: Video, title: "Videography", desc: "Cinematic video content that captures your brand's story and connects with your audience on a deeper level.", image: videographyImg },
@@ -53,7 +53,7 @@ const ServicesCarousel = () => {
         >
           <motion.div
             key={current}
-            className="grid md:grid-cols-2 min-h-[400px]"
+            className="grid md:grid-cols-2 h-[450px]"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -50 }}
@@ -74,11 +74,11 @@ const ServicesCarousel = () => {
                 Learn More
               </button>
             </div>
-            <div className="relative">
+            <div className="relative h-full overflow-hidden">
               <img
                 src={services[current].image}
                 alt={services[current].title}
-                className="w-full h-full object-cover min-h-[300px]"
+                className="w-full h-full object-cover"
                 loading="lazy"
                 width={1280}
                 height={720}

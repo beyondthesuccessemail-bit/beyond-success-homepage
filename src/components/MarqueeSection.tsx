@@ -54,17 +54,21 @@ const MarqueeSection = () => {
     hasDragged.current = false;
     dragStartX.current = e.clientX;
     dragStartOffset.current = offsetRef.current;
-    (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId);
+    // Don't setPointerCapture yet — wait until we confirm horizontal drag
   };
 
   const onPointerMove = (e: React.PointerEvent) => {
     if (!isDragging.current) return;
-    const delta = dragStartX.current - e.clientX;
-    if (Math.abs(delta) > 4) hasDragged.current = true;
-    let next = dragStartOffset.current + delta;
+    const deltaX = dragStartX.current - e.clientX;
+    if (Math.abs(deltaX) > 8) {
+      hasDragged.current = true;
+      // Only capture pointer once confirmed horizontal — this blocks vertical scroll
+      try { (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId); } catch (_) {}
+    }
+    let next = dragStartOffset.current + deltaX;
     const half = getHalfWidth();
     if (half > 0) {
-      next = ((next % half) + half) % half; // wrap around
+      next = ((next % half) + half) % half;
     }
     offsetRef.current = next;
     if (trackRef.current) {
@@ -79,6 +83,7 @@ const MarqueeSection = () => {
   return (
     <section
       className="py-8 overflow-hidden border-y border-gold/10 bg-card/20 cursor-grab active:cursor-grabbing select-none"
+      style={{ touchAction: "pan-y" }}
       onPointerDown={onPointerDown}
       onPointerMove={onPointerMove}
       onPointerUp={onPointerUp}
