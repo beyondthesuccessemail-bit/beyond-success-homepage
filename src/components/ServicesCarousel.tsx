@@ -30,7 +30,7 @@ const ServicesCarousel = () => {
 
   return (
     <section ref={ref} className="section-padding bg-navy-gradient relative overflow-hidden">
-      <div className="absolute bottom-0 left-0 w-80 h-80 bg-gold/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-gold/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto">
         <motion.div
