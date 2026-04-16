@@ -51,6 +51,7 @@ const ServicesCarousel = () => {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={isInView ? { opacity: 1, scale: 1 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
+          style={{ pointerEvents: isInView ? "auto" : "none" }}
         >
           <motion.div
             key={current}
@@ -126,6 +127,7 @@ const ServicesCarousel = () => {
               }`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.97 }}
+              style={{ pointerEvents: "auto" }}
             >
               <svc.icon className={`w-6 h-6 mb-2 ${i === current ? "text-gold" : "text-muted-foreground"}`} />
               <p className={`font-display text-xs font-semibold ${i === current ? "text-foreground" : "text-muted-foreground"}`}>

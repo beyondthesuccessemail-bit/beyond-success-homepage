@@ -65,7 +65,7 @@ const TestimonialsSection = () => {
               className="bg-card/40 border-glow rounded-2xl p-8 md:p-12 text-center"
               initial={{ opacity: 0, y: 20, scale: 0.98 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: -20, scale: 0.98 }}
+              exit={{ opacity: 0, y: -20, scale: 0.98, pointerEvents: "none" }}
               transition={{ duration: 0.5 }}
             >
               <Quote className="w-12 h-12 text-gold/40 mx-auto mb-6" />
@@ -82,10 +82,11 @@ const TestimonialsSection = () => {
             </motion.div>
           </AnimatePresence>
 
-          <div className="flex items-center justify-center gap-4 mt-8">
+          <div className="flex items-center justify-center gap-4 mt-8" style={{ position: "relative", zIndex: 10 }}>
             <button
               onClick={() => setCurrent((c) => (c - 1 + testimonials.length) % testimonials.length)}
               className="w-10 h-10 rounded-full border-glow flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-colors"
+              style={{ pointerEvents: "auto" }}
             >
               <ChevronLeft className="w-4 h-4" />
             </button>
@@ -97,12 +98,14 @@ const TestimonialsSection = () => {
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
                     i === current ? "bg-accent scale-125" : "bg-muted"
                   }`}
+                  style={{ pointerEvents: "auto" }}
                 />
               ))}
             </div>
             <button
               onClick={() => setCurrent((c) => (c + 1) % testimonials.length)}
               className="w-10 h-10 rounded-full border-glow flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-colors"
+              style={{ pointerEvents: "auto" }}
             >
               <ChevronRight className="w-4 h-4" />
             </button>
