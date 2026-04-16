@@ -119,21 +119,19 @@ const ServicesCarousel = () => {
         {/* Service cards strip */}
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 mt-10">
           {services.map((svc, i) => (
-            <motion.button
+            <button
               key={svc.title}
               onClick={() => setCurrent(i)}
-              className={`p-4 rounded-xl text-left transition-all duration-300 ${
+              className={`p-4 rounded-xl text-left transition-all duration-300 hover:scale-105 active:scale-95 ${
                 i === current ? "bg-accent/10 border-glow" : "bg-card/30 hover:bg-card/60"
               }`}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.97 }}
               style={{ pointerEvents: "auto" }}
             >
               <svc.icon className={`w-6 h-6 mb-2 ${i === current ? "text-gold" : "text-muted-foreground"}`} />
               <p className={`font-display text-xs font-semibold ${i === current ? "text-foreground" : "text-muted-foreground"}`}>
                 {svc.title}
               </p>
-            </motion.button>
+            </button>
           ))}
         </div>
       </div>
