@@ -6,7 +6,7 @@ export interface CaseStudy {
   tagline: string;
   description: string;
   results: string[];
-  videoSrc: string;
+  videoEmbed: string;
 }
 
 export interface ServiceData {
@@ -73,7 +73,7 @@ export const services: ServiceData[] = [
           "Increase in inbound enquiries via Instagram DMs",
           "Content consistently outperforming previous posts on reach",
         ],
-        videoSrc: "/videos/real-estate-costa-del-sol.MP4",
+        videoEmbed: "https://www.youtube.com/embed/ZKgJr0b6GQE",
       },
       {
         client: "Elevated Living — Costa del Sol",
@@ -85,7 +85,7 @@ export const services: ServiceData[] = [
           "Video shared by several local property pages",
           "Generated interest and enquiries from the target audience",
         ],
-        videoSrc: "/videos/real-estate-penthouse.MP4",
+        videoEmbed: "https://www.youtube.com/embed/bwUtvO3aenU",
       },
       {
         client: "South Bay Yacht Charters",
@@ -97,7 +97,7 @@ export const services: ServiceData[] = [
           "Increase in profile visits and enquiries after posting",
           "Positive engagement from their target audience",
         ],
-        videoSrc: "/videos/south-bay-yacht-charters.MP4",
+        videoEmbed: "https://www.youtube.com/embed/LhetiVBbZSA",
       },
     ],
   },

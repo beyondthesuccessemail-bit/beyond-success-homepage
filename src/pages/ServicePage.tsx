@@ -283,18 +283,15 @@ const ServicePage = () => {
                   {/* Video */}
                   <div className={`relative group ${i % 2 === 1 ? "lg:col-start-2" : ""}`}>
                     <div className="relative rounded-2xl overflow-hidden border border-gold/20 shadow-[0_0_60px_-10px_rgba(212,175,55,0.25)]">
-                      <video
-                        src={study.videoSrc}
-                        className="w-full aspect-[9/16] object-cover max-h-[600px] bg-black"
-                        controls
-                        playsInline
-                        preload="metadata"
-                        poster=""
+                      <iframe
+                        src={`${study.videoEmbed}?rel=0&modestbranding=1`}
+                        className="w-full aspect-[9/16] max-h-[600px]"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        title={study.client}
                       />
-                      {/* Subtle gold overlay on hover */}
                       <div className="absolute inset-0 bg-gradient-to-t from-gold/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                     </div>
-                    {/* Decorative glow */}
                     <div className="absolute -inset-4 bg-gold/5 rounded-3xl blur-2xl -z-10" />
                   </div>
 
