@@ -33,9 +33,6 @@ import ppcHero from "@/assets/service-ppc-hero.jpg";
 import paidSocialHero from "@/assets/service-paid-social-hero.jpg";
 import emailMarketingHero from "@/assets/service-email-marketing-hero.jpg";
 
-import realEstateVideo1 from "@/assets/real-estate-costa-del-sol.MP4";
-import realEstateVideo2 from "@/assets/real-estate-penthouse.MP4";
-import yachtVideo from "@/assets/south-bay-yacht-charters.MP4";
 
 export const services: ServiceData[] = [
   {
@@ -76,7 +73,7 @@ export const services: ServiceData[] = [
           "Increase in inbound enquiries via Instagram DMs",
           "Content consistently outperforming previous posts on reach",
         ],
-        videoSrc: realEstateVideo1,
+        videoSrc: "/videos/real-estate-costa-del-sol.MP4",
       },
       {
         client: "Elevated Living — Costa del Sol",
@@ -88,7 +85,7 @@ export const services: ServiceData[] = [
           "Video shared by several local property pages",
           "Generated interest and enquiries from the target audience",
         ],
-        videoSrc: realEstateVideo2,
+        videoSrc: "/videos/real-estate-penthouse.MP4",
       },
       {
         client: "South Bay Yacht Charters",
@@ -100,7 +97,7 @@ export const services: ServiceData[] = [
           "Increase in profile visits and enquiries after posting",
           "Positive engagement from their target audience",
         ],
-        videoSrc: yachtVideo,
+        videoSrc: "/videos/south-bay-yacht-charters.MP4",
       },
     ],
   },

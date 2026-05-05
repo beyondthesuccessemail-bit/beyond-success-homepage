@@ -57,7 +57,7 @@ const MissionSection = () => {
               animate={{ y: [0, -8, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
             >
-              <p className="text-gold font-display text-3xl font-bold">200+</p>
+              <p className="text-gold font-display text-3xl font-bold">30+</p>
               <p className="text-muted-foreground text-sm font-body">Brands Transformed</p>
             </motion.div>
           </motion.div>
