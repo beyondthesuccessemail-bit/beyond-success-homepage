@@ -250,6 +250,107 @@ const ServicePage = () => {
         </div>
       </section>
 
+      {/* Case Studies */}
+      {service.caseStudies && service.caseStudies.length > 0 && (
+        <section className="section-padding">
+          <div className="max-w-6xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-16"
+            >
+              <span className="text-gold font-body text-sm tracking-widest uppercase mb-4 block">Real Results</span>
+              <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground">
+                Our Work in <span className="text-gradient-gold">Action</span>
+              </h2>
+              <p className="text-muted-foreground font-body text-lg mt-4 max-w-2xl mx-auto">
+                Don't take our word for it. See the content we've produced for real clients and the results it delivered.
+              </p>
+            </motion.div>
+
+            <div className="space-y-24">
+              {service.caseStudies.map((study, i) => (
+                <motion.div
+                  key={study.client}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-80px" }}
+                  transition={{ duration: 0.7, delay: 0.1 }}
+                  className={`grid lg:grid-cols-2 gap-10 items-center ${i % 2 === 1 ? "lg:grid-flow-dense" : ""}`}
+                >
+                  {/* Video */}
+                  <div className={`relative group ${i % 2 === 1 ? "lg:col-start-2" : ""}`}>
+                    <div className="relative rounded-2xl overflow-hidden border border-gold/20 shadow-[0_0_60px_-10px_rgba(212,175,55,0.25)]">
+                      <video
+                        src={study.videoSrc}
+                        className="w-full aspect-[9/16] object-cover max-h-[600px] bg-black"
+                        controls
+                        playsInline
+                        preload="metadata"
+                        poster=""
+                      />
+                      {/* Subtle gold overlay on hover */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-gold/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                    </div>
+                    {/* Decorative glow */}
+                    <div className="absolute -inset-4 bg-gold/5 rounded-3xl blur-2xl -z-10" />
+                  </div>
+
+                  {/* Content */}
+                  <div className={`space-y-6 ${i % 2 === 1 ? "lg:col-start-1 lg:row-start-1" : ""}`}>
+                    {/* Badge */}
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-gold/20">
+                      <span className="w-2 h-2 rounded-full bg-gold animate-pulse" />
+                      <span className="font-body text-xs text-gold tracking-widest uppercase">{study.industry}</span>
+                    </div>
+
+                    <div>
+                      <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-2 leading-tight">
+                        {study.client}
+                      </h3>
+                      <p className="font-display text-xl text-gold/80 italic">"{study.tagline}"</p>
+                    </div>
+
+                    <p className="text-muted-foreground font-body text-base leading-relaxed">
+                      {study.description}
+                    </p>
+
+                    {/* Results */}
+                    <div className="space-y-3 pt-2">
+                      <span className="font-display text-xs font-semibold text-gold tracking-widest uppercase">Key Results</span>
+                      {study.results.map((result, ri) => (
+                        <motion.div
+                          key={ri}
+                          initial={{ opacity: 0, x: -20 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 0.4, delay: ri * 0.1 + 0.3 }}
+                          className="flex items-start gap-3 p-4 rounded-xl bg-card/60 border border-gold/10 hover:border-gold/30 transition-colors duration-300"
+                        >
+                          <div className="w-5 h-5 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center shrink-0 mt-0.5">
+                            <div className="w-2 h-2 rounded-full bg-gold" />
+                          </div>
+                          <span className="font-body text-foreground text-sm">{result}</span>
+                        </motion.div>
+                      ))}
+                    </div>
+
+                    <button
+                      onClick={scrollToForm}
+                      className="mt-2 px-6 py-3 rounded-lg bg-accent text-accent-foreground font-display font-semibold text-sm glow-gold hover:scale-105 transition-transform duration-300 inline-flex items-center gap-2"
+                    >
+                      Get Results Like This <ArrowRight className="w-4 h-4" />
+                    </button>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Related Services */}
       {service.relatedServices && service.relatedServices.length > 0 && (
         <section className="px-6 py-16 bg-card/30">

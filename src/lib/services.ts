@@ -1,5 +1,14 @@
 import { Video, Share2, Target, Search, Globe, CreditCard, Mail, type LucideIcon } from "lucide-react";
 
+export interface CaseStudy {
+  client: string;
+  industry: string;
+  tagline: string;
+  description: string;
+  results: string[];
+  videoSrc: string;
+}
+
 export interface ServiceData {
   icon: LucideIcon;
   title: string;
@@ -13,6 +22,7 @@ export interface ServiceData {
   features: string[];
   process: { step: string; description: string }[];
   relatedServices?: { text: string; linkText: string; slug: string }[];
+  caseStudies?: CaseStudy[];
 }
 
 import socialMediaHero from "@/assets/service-social-media-hero.jpg";
@@ -22,6 +32,10 @@ import seoHero from "@/assets/service-seo-hero.jpg";
 import ppcHero from "@/assets/service-ppc-hero.jpg";
 import paidSocialHero from "@/assets/service-paid-social-hero.jpg";
 import emailMarketingHero from "@/assets/service-email-marketing-hero.jpg";
+
+import realEstateVideo1 from "@/assets/real-estate-costa-del-sol.MP4";
+import realEstateVideo2 from "@/assets/real-estate-penthouse.MP4";
+import yachtVideo from "@/assets/south-bay-yacht-charters.MP4";
 
 export const services: ServiceData[] = [
   {
@@ -50,6 +64,44 @@ export const services: ServiceData[] = [
       { step: "Film", description: "We come to your location and film professional short-form video content for Reels, TikToks, and Shorts." },
       { step: "Edit & Schedule", description: "We edit the content, add captions and graphics, then schedule it across your platforms." },
       { step: "Report", description: "Monthly performance reports showing reach, engagement, growth, and actionable insights for the next month." },
+    ],
+    caseStudies: [
+      {
+        client: "Marco's Real Estate",
+        industry: "Luxury Real Estate · Costa del Sol",
+        tagline: "Selling a lifestyle, not just a property.",
+        description: "Marco specialises in helping international buyers navigate the Costa del Sol luxury property market. We created cinematic short-form content that showcased the stress-free experience he delivers, building trust with high-net-worth buyers across Instagram and TikTok.",
+        results: [
+          "Noticeable uptick in profile views within the first month",
+          "Increase in inbound enquiries via Instagram DMs",
+          "Content consistently outperforming previous posts on reach",
+        ],
+        videoSrc: realEstateVideo1,
+      },
+      {
+        client: "Elevated Living — Costa del Sol",
+        industry: "Ultra-Luxury Real Estate",
+        tagline: "Two levels. Two terraces. One view that doesn't quit.",
+        description: "A dual-terrace penthouse required content that matched its calibre. We produced a short-form video capturing the property's views and architectural detail, distributed across social channels to reach serious buyers.",
+        results: [
+          "Strong organic reach for a brand new account",
+          "Video shared by several local property pages",
+          "Generated interest and enquiries from the target audience",
+        ],
+        videoSrc: realEstateVideo2,
+      },
+      {
+        client: "South Bay Yacht Charters",
+        industry: "Luxury Yacht & Marine Leisure",
+        tagline: "This is what freedom on the water looks like.",
+        description: "South Bay Yacht Charters wanted content that captured the experience of chartering a luxury yacht. We produced a polished social film to help position the brand and reach a relevant audience online.",
+        results: [
+          "Best-performing post on their social media to date",
+          "Increase in profile visits and enquiries after posting",
+          "Positive engagement from their target audience",
+        ],
+        videoSrc: yachtVideo,
+      },
     ],
   },
   {

@@ -21,4 +21,5 @@ export default defineConfig(({ mode }) => ({
   optimizeDeps: {
     include: ["react", "react-dom", "react-hook-form", "@hookform/resolvers/zod"],
   },
+  assetsInclude: ["**/*.MP4"],
 }));
