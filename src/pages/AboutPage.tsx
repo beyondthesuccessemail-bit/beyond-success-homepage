@@ -191,10 +191,10 @@ const AboutPage = () => {
       {/* ── Stats strip ── */}
       <section className="section-padding bg-navy-gradient">
         <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
-          <Counter target={200} suffix="+" label="Entrepreneurs Interviewed" />
-          <Counter target={50} suffix="+" label="Clients Served" />
-          <Counter target={12} suffix="" label="Months Since Launch" />
-          <Counter target={7} suffix="" label="Core Services" />
+          <Counter target={30} suffix="+" label="Brands Helped" />
+          <Counter target={5} suffix="+" label="Years Experience" />
+          <Counter target={50} suffix="+" label="Founders Interviewed" />
+          <Counter target={95} suffix="%" label="Client Retention" />
         </div>
       </section>
 
